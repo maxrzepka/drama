@@ -7,13 +7,23 @@
   (:require  [net.cgrand.enlive-html :as h]))
 
 ;; ## Extract all plays
-(def source "http://toutmoliere.net")
+(def moliere "http://toutmoliere.net/")
 #_(def raw (h/html-resource (java.net.URL. "http://toutmoliere.net/oeuvres.html")))
 (def raw (h/html-resource (java.io.File. "resources/data/oeuvres.html")))
 
-(def plays (let [nodes (h/select raw [:div#centre :div#liste1 :ul.listerub :li :a])]))
+(def plays
+  (let [nodes (h/select raw [:div#centre :div#liste1 :ul.listerub :li :a])
+        extractor (fn [n]
+                    {:url (str moliere (-> n :attrs :href))
+                     :title (-> n :content first)
+                     :date (-> n (h/select [:i]) first h/text)
+                     })]
+    (map extractor nodes)))
 
 ;; ## Extract the characters
+(def a-play (h/html-resource (java.io.File. "resources/data/ecoledesfemmes.html")))
+
+
 
 ;; ## Put it all together
 
