@@ -56,16 +56,25 @@
          (assoc m :characters (characters (resource (characters-url (resource u))))))
        plays))
 
-(defn file-dump [f coll & {:keys [separator] :or {separator "|"}}]
+(defn dump-file [f coll & {:keys [separator] :or {separator "|"}}]
   (spit f (apply str (map #(str (clojure.string/join separator %) "\n") coll))))
+
+(defn load-file [f & {:keys [separator header] :or {separator "|"}}]
+  (let [lines (.split (slurp f) "\n")
+        separator ({"|" "\\|"} separator separator)
+        cut (fn [l] ((if (sequential? header)
+                       (partial zipmap header)
+                       identity)
+                     (seq (.split l separator))))]
+    (map cut lines)))
 
 (defn dump [plays]
   (let [l1 (map (juxt :title :date) plays)
         l2 (mapcat (fn [{cs :characters t :title :as p}]
                      (keep (fn [c] (when (< 1 (count c)) (cons t c))) cs))
                    plays)]
-    (do (file-dump "resources/data/moliere_plays.txt" l1)
-        (file-dump "resources/data/moliere_characters.txt" l2))))
+    (do (dump-file "resources/data/moliere_plays.txt" l1)
+        (dump-file "resources/data/moliere_characters.txt" l2))))
 
 ;; ## Further information
 ;;
