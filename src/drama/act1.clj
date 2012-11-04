@@ -17,10 +17,10 @@
 
 #_(def raw (h/html-resource (java.net.URL. "http://toutmoliere.net/oeuvres.html")))
 
-(def raw (h/html-resource (java.io.File. "resources/data/oeuvres.html")))
+#_(def raw (h/html-resource (java.io.File. "resources/data/oeuvres.html")))
 
-(def plays
-  (let [nodes (h/select raw [:div#centre :div#liste1 :ul.listerub :li :a])
+(defn extract-summary [page]
+  (let [nodes (h/select (resource page) [:div#centre :div#liste1 :ul.listerub :li :a])
         extract (fn [n]
                     {:url (str moliere (-> n :attrs :href))
                      :title (-> n :content first)
@@ -29,7 +29,7 @@
     (map extract nodes)))
 
 ;; ## Extract the characters
-(def a-play (h/html-resource (java.io.File. "resources/data/ecoledesfemmes.html")))
+#_(def a-play (h/html-resource (java.io.File. "resources/data/ecoledesfemmes.html")))
 
 (defn characters-url [page]
   (->> (h/select page [:ul#lapiece [:a (h/attr= :title "Acte 1")]])
@@ -39,10 +39,10 @@
        (str moliere)
       ))
 
-(def a-act1 (h/html-resource (java.io.File. "resources/data/ecoledesfemmes_acte1.html")))
+#_(def a-act1 (h/html-resource (java.io.File. "resources/data/ecoledesfemmes_acte1.html")))
 
 (defn characters [nodes]
-  (let [raw (:content (first (h/select a-act1 [:div#centre_texte :div :div])))
+  (let [raw (:content (first (h/select nodes [:div#centre_texte :div :div])))
         raw1 (filter string? raw)
         extractor (fn[s] (map (fn[ss] (.trim ss))
                               (.split s ",")))]
@@ -50,8 +50,8 @@
 
 ;; ## Put it all together
 
-;; lazy-sequence : fetch the data when
-(def all-in-one
+;; lazy-sequence : fetch the data when requested
+(defn all-in-one [plays]
   (map (fn [{u :url :as m}]
          (assoc m :characters (characters (resource (characters-url (resource u))))))
        plays))
@@ -59,7 +59,7 @@
 (defn dump-file [f coll & {:keys [separator] :or {separator "|"}}]
   (spit f (apply str (map #(str (clojure.string/join separator %) "\n") coll))))
 
-(defn load-file [f & {:keys [separator header] :or {separator "|"}}]
+(defn file->coll [f & {:keys [separator header] :or {separator "|"}}]
   (let [lines (.split (slurp f) "\n")
         separator ({"|" "\\|"} separator separator)
         cut (fn [l] ((if (sequential? header)
