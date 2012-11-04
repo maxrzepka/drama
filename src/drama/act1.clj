@@ -1,4 +1,4 @@
-;; # Act I : extracting or scraping web pages with enlive
+;; # Act I : scraping web pages with enlive
 ;;
 ;; The goal is to get all plays and their characters
 ;; from some well-known writer (here a french one Molière)
@@ -15,12 +15,10 @@
 ;; ## Extract all plays
 (def moliere "http://toutmoliere.net/")
 
-#_(def raw (h/html-resource (java.net.URL. "http://toutmoliere.net/oeuvres.html")))
-
-#_(def raw (h/html-resource (java.io.File. "resources/data/oeuvres.html")))
-
-(defn extract-summary [page]
-  (let [nodes (h/select (resource page) [:div#centre :div#liste1 :ul.listerub :li :a])
+(defn extract-summary
+  "Extract list of plays : url = http://toutmoliere.net/oeuvres.html"
+  [url]
+  (let [nodes (h/select (resource url) [:div#centre :div#liste1 :ul.listerub :li :a])
         extract (fn [n]
                     {:url (str moliere (-> n :attrs :href))
                      :title (-> n :content first)
@@ -29,7 +27,9 @@
     (map extract nodes)))
 
 ;; ## Extract the characters
-#_(def a-play (h/html-resource (java.io.File. "resources/data/ecoledesfemmes.html")))
+;;
+;; From play's main page  go to play's act 1 and extract list of characters
+;; HTML page already present resources/data/ecoledesfemmes.html resources/data/ecoledesfemmes_acte1.html
 
 (defn characters-url [page]
   (->> (h/select page [:ul#lapiece [:a (h/attr= :title "Acte 1")]])
@@ -38,8 +38,6 @@
        :href
        (str moliere)
       ))
-
-#_(def a-act1 (h/html-resource (java.io.File. "resources/data/ecoledesfemmes_acte1.html")))
 
 (defn characters [nodes]
   (let [raw (:content (first (h/select nodes [:div#centre_texte :div :div])))
@@ -51,12 +49,15 @@
 ;; ## Put it all together
 
 ;; lazy-sequence : fetch the data when requested
-(defn all-in-one [plays]
+(defn append-characters
+  [plays]
   (map (fn [{u :url :as m}]
          (assoc m :characters (characters (resource (characters-url (resource u))))))
        plays))
 
-(defn dump-file [f coll & {:keys [separator] :or {separator "|"}}]
+;; ## Some IO functions
+(defn dump-file
+  [f coll & {:keys [separator] :or {separator "|"}}]
   (spit f (apply str (map #(str (clojure.string/join separator %) "\n") coll))))
 
 (defn file->coll [f & {:keys [separator header] :or {separator "|"}}]
@@ -76,10 +77,12 @@
     (do (dump-file "resources/data/moliere_plays.txt" l1)
         (dump-file "resources/data/moliere_characters.txt" l2))))
 
-;; ## Further information
+;; ## Further information on enlive
+;;
+;; * https://github.com/cgrand/enlive
+;; * small web app to play with enlive API http://cold-dusk-9608.herokuapp.com/
 ;;
 ;; * wonderful world of automata : new version of enlive is coming
 ;; https://groups.google.com/group/enlive-clj/browse_thread/thread/5301234ebfaee3c4
 ;; https://groups.google.com/group/enlive-clj/browse_thread/thread/04730249c02c2e15
 ;;
-;; * small web app to play with enlive API

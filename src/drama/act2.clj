@@ -4,15 +4,16 @@
 ;;
 (ns drama.act2
   (:require [drama.act1 :as a1]
-            ;;[cascalog.api :as ca]
-            ;;[cascalog.ops :as co]
+            [cascalog.api :as ca]
+            [cascalog.ops :as co]
             ))
 
 ;; ## Model
-;; play has :title :date :characters , a character has :name :desc
+;; play has title and date  , a character has name and desc
 
 ;; list of [title date]
-(def plays (a1/file->coll "resources/data/moliere_plays.txt" ))
+(def plays
+  (a1/file->coll "resources/data/moliere_plays.txt" ))
 
 ;; ## Some clean up
 ;; characters are some empty or last 2 columns should be join
@@ -35,16 +36,16 @@
 ;; ## Get all characters of a play
 (defn find-characters [title]
   (ca/??<- [?name ?desc]
-           (characters ?title ?name ?desc)
-           (= ?title title)))
+           (characters title ?name ?desc)
+           ))
 
 ;; ## Get all plays where a character is present
 ;; TODO sth wrong in the implicit join (all or nothing)
 (defn find-plays [name]
-  (ca/??<- [?title ?date ?desc]
+  (ca/??<- [?title ?date]
            (plays ?title ?date)
-           (characters ?title ?name ?desc)
-           (= ?name name)))
+           (characters ?title name ?desc)
+           ))
 
 ;; ## Top 5 of the most used characters
 
