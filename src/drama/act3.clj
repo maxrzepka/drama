@@ -30,6 +30,7 @@
 (defn vec->item [[t d]]
   {:id t :text d})
 
+;; Example of a middleware in Ring
 ;; taken from git://github.com/myfreeweb/ringfinger.git
 ;; ringfinger /corefinger/src/main/clojure/corefinger/middleware.clj
 (defn wrap-logging
@@ -51,10 +52,6 @@
                     (.replace "\\" ""))]
       (logger entry)
       res)))
-
-#_(defn render [body]
-  (let [body (if (sequential? body) (apply str body) body)]
-    (response (clojure.java.io/input-stream (.getBytes body "utf-8")))))
 
 (defn render
   "render view in utf-8"
