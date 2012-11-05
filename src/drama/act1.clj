@@ -60,13 +60,14 @@
   [f coll & {:keys [separator] :or {separator "|"}}]
   (spit f (apply str (map #(str (clojure.string/join separator %) "\n") coll))))
 
-(defn file->coll [f & {:keys [separator header] :or {separator "|"}}]
+(defn file->coll
+  [f & {:keys [separator header] :or {separator "|"}}]
   (let [lines (.split (slurp f) "\n")
         separator ({"|" "\\|"} separator separator)
         cut (fn [l] ((if (sequential? header)
                        (partial zipmap header)
                        identity)
-                     (seq (.split l separator))))]
+                     (map #(.trim %) (.split l separator))))]
     (map cut lines)))
 
 (defn dump [plays]
