@@ -1,297 +1,213 @@
-La Jalousie du Barbouillé |ARNOLPHE|autrement M. DE LA SOUCHE.
-La Jalousie du Barbouillé |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-La Jalousie du Barbouillé |HORACE|amant d’Agnès.
-La Jalousie du Barbouillé |ALAIN|paysan|valet d’Arnolphe.
-La Jalousie du Barbouillé |GEORGETTE|paysanne|servante d’Arnolphe.
-La Jalousie du Barbouillé |CHRYSALDE|ami d’Arnolphe.
-La Jalousie du Barbouillé |ENRIQUE|beau-frère de Chrysalde.
-La Jalousie du Barbouillé |ORONTE|père d’Horace et grand ami d’Arnolphe.
-La Jalousie du Barbouillé |
-Le Médecin volant |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Médecin volant |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Médecin volant |HORACE|amant d’Agnès.
-Le Médecin volant |ALAIN|paysan|valet d’Arnolphe.
-Le Médecin volant |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Médecin volant |CHRYSALDE|ami d’Arnolphe.
-Le Médecin volant |ENRIQUE|beau-frère de Chrysalde.
-Le Médecin volant |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Médecin volant |
-L’Étourdi |ARNOLPHE|autrement M. DE LA SOUCHE.
-L’Étourdi |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-L’Étourdi |HORACE|amant d’Agnès.
-L’Étourdi |ALAIN|paysan|valet d’Arnolphe.
-L’Étourdi |GEORGETTE|paysanne|servante d’Arnolphe.
-L’Étourdi |CHRYSALDE|ami d’Arnolphe.
-L’Étourdi |ENRIQUE|beau-frère de Chrysalde.
-L’Étourdi |ORONTE|père d’Horace et grand ami d’Arnolphe.
-L’Étourdi |
-Le Dépit amoureux |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Dépit amoureux |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Dépit amoureux |HORACE|amant d’Agnès.
-Le Dépit amoureux |ALAIN|paysan|valet d’Arnolphe.
-Le Dépit amoureux |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Dépit amoureux |CHRYSALDE|ami d’Arnolphe.
-Le Dépit amoureux |ENRIQUE|beau-frère de Chrysalde.
-Le Dépit amoureux |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Dépit amoureux |
-Les Précieuses ridicules |ARNOLPHE|autrement M. DE LA SOUCHE.
-Les Précieuses ridicules |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Les Précieuses ridicules |HORACE|amant d’Agnès.
-Les Précieuses ridicules |ALAIN|paysan|valet d’Arnolphe.
-Les Précieuses ridicules |GEORGETTE|paysanne|servante d’Arnolphe.
-Les Précieuses ridicules |CHRYSALDE|ami d’Arnolphe.
-Les Précieuses ridicules |ENRIQUE|beau-frère de Chrysalde.
-Les Précieuses ridicules |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Les Précieuses ridicules |
-Sganarelle ou le Cocu imaginaire |ARNOLPHE|autrement M. DE LA SOUCHE.
-Sganarelle ou le Cocu imaginaire |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Sganarelle ou le Cocu imaginaire |HORACE|amant d’Agnès.
-Sganarelle ou le Cocu imaginaire |ALAIN|paysan|valet d’Arnolphe.
-Sganarelle ou le Cocu imaginaire |GEORGETTE|paysanne|servante d’Arnolphe.
-Sganarelle ou le Cocu imaginaire |CHRYSALDE|ami d’Arnolphe.
-Sganarelle ou le Cocu imaginaire |ENRIQUE|beau-frère de Chrysalde.
-Sganarelle ou le Cocu imaginaire |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Sganarelle ou le Cocu imaginaire |
-Dom Garcie de Navarre |ARNOLPHE|autrement M. DE LA SOUCHE.
-Dom Garcie de Navarre |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Dom Garcie de Navarre |HORACE|amant d’Agnès.
-Dom Garcie de Navarre |ALAIN|paysan|valet d’Arnolphe.
-Dom Garcie de Navarre |GEORGETTE|paysanne|servante d’Arnolphe.
-Dom Garcie de Navarre |CHRYSALDE|ami d’Arnolphe.
-Dom Garcie de Navarre |ENRIQUE|beau-frère de Chrysalde.
-Dom Garcie de Navarre |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Dom Garcie de Navarre |
-L’École des maris |ARNOLPHE|autrement M. DE LA SOUCHE.
-L’École des maris |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-L’École des maris |HORACE|amant d’Agnès.
-L’École des maris |ALAIN|paysan|valet d’Arnolphe.
-L’École des maris |GEORGETTE|paysanne|servante d’Arnolphe.
-L’École des maris |CHRYSALDE|ami d’Arnolphe.
-L’École des maris |ENRIQUE|beau-frère de Chrysalde.
-L’École des maris |ORONTE|père d’Horace et grand ami d’Arnolphe.
-L’École des maris |
-Les Fâcheux |ARNOLPHE|autrement M. DE LA SOUCHE.
-Les Fâcheux |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Les Fâcheux |HORACE|amant d’Agnès.
-Les Fâcheux |ALAIN|paysan|valet d’Arnolphe.
-Les Fâcheux |GEORGETTE|paysanne|servante d’Arnolphe.
-Les Fâcheux |CHRYSALDE|ami d’Arnolphe.
-Les Fâcheux |ENRIQUE|beau-frère de Chrysalde.
-Les Fâcheux |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Les Fâcheux |
-L’Ecole des femmes |ARNOLPHE|autrement M. DE LA SOUCHE.
-L’Ecole des femmes |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-L’Ecole des femmes |HORACE|amant d’Agnès.
-L’Ecole des femmes |ALAIN|paysan|valet d’Arnolphe.
-L’Ecole des femmes |GEORGETTE|paysanne|servante d’Arnolphe.
-L’Ecole des femmes |CHRYSALDE|ami d’Arnolphe.
-L’Ecole des femmes |ENRIQUE|beau-frère de Chrysalde.
-L’Ecole des femmes |ORONTE|père d’Horace et grand ami d’Arnolphe.
-L’Ecole des femmes |
-La Critique de L’École des femmes |ARNOLPHE|autrement M. DE LA SOUCHE.
-La Critique de L’École des femmes |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-La Critique de L’École des femmes |HORACE|amant d’Agnès.
-La Critique de L’École des femmes |ALAIN|paysan|valet d’Arnolphe.
-La Critique de L’École des femmes |GEORGETTE|paysanne|servante d’Arnolphe.
-La Critique de L’École des femmes |CHRYSALDE|ami d’Arnolphe.
-La Critique de L’École des femmes |ENRIQUE|beau-frère de Chrysalde.
-La Critique de L’École des femmes |ORONTE|père d’Horace et grand ami d’Arnolphe.
-La Critique de L’École des femmes |
-L’Impromptu de Versailles |ARNOLPHE|autrement M. DE LA SOUCHE.
-L’Impromptu de Versailles |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-L’Impromptu de Versailles |HORACE|amant d’Agnès.
-L’Impromptu de Versailles |ALAIN|paysan|valet d’Arnolphe.
-L’Impromptu de Versailles |GEORGETTE|paysanne|servante d’Arnolphe.
-L’Impromptu de Versailles |CHRYSALDE|ami d’Arnolphe.
-L’Impromptu de Versailles |ENRIQUE|beau-frère de Chrysalde.
-L’Impromptu de Versailles |ORONTE|père d’Horace et grand ami d’Arnolphe.
-L’Impromptu de Versailles |
-Le Mariage forcé |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Mariage forcé |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Mariage forcé |HORACE|amant d’Agnès.
-Le Mariage forcé |ALAIN|paysan|valet d’Arnolphe.
-Le Mariage forcé |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Mariage forcé |CHRYSALDE|ami d’Arnolphe.
-Le Mariage forcé |ENRIQUE|beau-frère de Chrysalde.
-Le Mariage forcé |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Mariage forcé |
-La Princesse d’Élide |ARNOLPHE|autrement M. DE LA SOUCHE.
-La Princesse d’Élide |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-La Princesse d’Élide |HORACE|amant d’Agnès.
-La Princesse d’Élide |ALAIN|paysan|valet d’Arnolphe.
-La Princesse d’Élide |GEORGETTE|paysanne|servante d’Arnolphe.
-La Princesse d’Élide |CHRYSALDE|ami d’Arnolphe.
-La Princesse d’Élide |ENRIQUE|beau-frère de Chrysalde.
-La Princesse d’Élide |ORONTE|père d’Horace et grand ami d’Arnolphe.
-La Princesse d’Élide |
-Le Tartuffe |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Tartuffe |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Tartuffe |HORACE|amant d’Agnès.
-Le Tartuffe |ALAIN|paysan|valet d’Arnolphe.
-Le Tartuffe |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Tartuffe |CHRYSALDE|ami d’Arnolphe.
-Le Tartuffe |ENRIQUE|beau-frère de Chrysalde.
-Le Tartuffe |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Tartuffe |
-Dom Juan |ARNOLPHE|autrement M. DE LA SOUCHE.
-Dom Juan |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Dom Juan |HORACE|amant d’Agnès.
-Dom Juan |ALAIN|paysan|valet d’Arnolphe.
-Dom Juan |GEORGETTE|paysanne|servante d’Arnolphe.
-Dom Juan |CHRYSALDE|ami d’Arnolphe.
-Dom Juan |ENRIQUE|beau-frère de Chrysalde.
-Dom Juan |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Dom Juan |
-L’Amour Médecin |ARNOLPHE|autrement M. DE LA SOUCHE.
-L’Amour Médecin |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-L’Amour Médecin |HORACE|amant d’Agnès.
-L’Amour Médecin |ALAIN|paysan|valet d’Arnolphe.
-L’Amour Médecin |GEORGETTE|paysanne|servante d’Arnolphe.
-L’Amour Médecin |CHRYSALDE|ami d’Arnolphe.
-L’Amour Médecin |ENRIQUE|beau-frère de Chrysalde.
-L’Amour Médecin |ORONTE|père d’Horace et grand ami d’Arnolphe.
-L’Amour Médecin |
-Le Misanthrope |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Misanthrope |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Misanthrope |HORACE|amant d’Agnès.
-Le Misanthrope |ALAIN|paysan|valet d’Arnolphe.
-Le Misanthrope |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Misanthrope |CHRYSALDE|ami d’Arnolphe.
-Le Misanthrope |ENRIQUE|beau-frère de Chrysalde.
-Le Misanthrope |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Misanthrope |
-Le Médecin malgré lui |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Médecin malgré lui |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Médecin malgré lui |HORACE|amant d’Agnès.
-Le Médecin malgré lui |ALAIN|paysan|valet d’Arnolphe.
-Le Médecin malgré lui |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Médecin malgré lui |CHRYSALDE|ami d’Arnolphe.
-Le Médecin malgré lui |ENRIQUE|beau-frère de Chrysalde.
-Le Médecin malgré lui |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Médecin malgré lui |
-Mélicerte |ARNOLPHE|autrement M. DE LA SOUCHE.
-Mélicerte |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Mélicerte |HORACE|amant d’Agnès.
-Mélicerte |ALAIN|paysan|valet d’Arnolphe.
-Mélicerte |GEORGETTE|paysanne|servante d’Arnolphe.
-Mélicerte |CHRYSALDE|ami d’Arnolphe.
-Mélicerte |ENRIQUE|beau-frère de Chrysalde.
-Mélicerte |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Mélicerte |
-Pastorale comique |ARNOLPHE|autrement M. DE LA SOUCHE.
-Pastorale comique |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Pastorale comique |HORACE|amant d’Agnès.
-Pastorale comique |ALAIN|paysan|valet d’Arnolphe.
-Pastorale comique |GEORGETTE|paysanne|servante d’Arnolphe.
-Pastorale comique |CHRYSALDE|ami d’Arnolphe.
-Pastorale comique |ENRIQUE|beau-frère de Chrysalde.
-Pastorale comique |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Pastorale comique |
-Le Sicilien ou l’Amour peintre |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Sicilien ou l’Amour peintre |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Sicilien ou l’Amour peintre |HORACE|amant d’Agnès.
-Le Sicilien ou l’Amour peintre |ALAIN|paysan|valet d’Arnolphe.
-Le Sicilien ou l’Amour peintre |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Sicilien ou l’Amour peintre |CHRYSALDE|ami d’Arnolphe.
-Le Sicilien ou l’Amour peintre |ENRIQUE|beau-frère de Chrysalde.
-Le Sicilien ou l’Amour peintre |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Sicilien ou l’Amour peintre |
-Amphitryon |ARNOLPHE|autrement M. DE LA SOUCHE.
-Amphitryon |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Amphitryon |HORACE|amant d’Agnès.
-Amphitryon |ALAIN|paysan|valet d’Arnolphe.
-Amphitryon |GEORGETTE|paysanne|servante d’Arnolphe.
-Amphitryon |CHRYSALDE|ami d’Arnolphe.
-Amphitryon |ENRIQUE|beau-frère de Chrysalde.
-Amphitryon |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Amphitryon |
-George Dandin |ARNOLPHE|autrement M. DE LA SOUCHE.
-George Dandin |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-George Dandin |HORACE|amant d’Agnès.
-George Dandin |ALAIN|paysan|valet d’Arnolphe.
-George Dandin |GEORGETTE|paysanne|servante d’Arnolphe.
-George Dandin |CHRYSALDE|ami d’Arnolphe.
-George Dandin |ENRIQUE|beau-frère de Chrysalde.
-George Dandin |ORONTE|père d’Horace et grand ami d’Arnolphe.
-George Dandin |
-L’Avare |ARNOLPHE|autrement M. DE LA SOUCHE.
-L’Avare |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-L’Avare |HORACE|amant d’Agnès.
-L’Avare |ALAIN|paysan|valet d’Arnolphe.
-L’Avare |GEORGETTE|paysanne|servante d’Arnolphe.
-L’Avare |CHRYSALDE|ami d’Arnolphe.
-L’Avare |ENRIQUE|beau-frère de Chrysalde.
-L’Avare |ORONTE|père d’Horace et grand ami d’Arnolphe.
-L’Avare |
-Monsieur de Pourceaugnac |ARNOLPHE|autrement M. DE LA SOUCHE.
-Monsieur de Pourceaugnac |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Monsieur de Pourceaugnac |HORACE|amant d’Agnès.
-Monsieur de Pourceaugnac |ALAIN|paysan|valet d’Arnolphe.
-Monsieur de Pourceaugnac |GEORGETTE|paysanne|servante d’Arnolphe.
-Monsieur de Pourceaugnac |CHRYSALDE|ami d’Arnolphe.
-Monsieur de Pourceaugnac |ENRIQUE|beau-frère de Chrysalde.
-Monsieur de Pourceaugnac |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Monsieur de Pourceaugnac |
-Les Amants magnifiques |ARNOLPHE|autrement M. DE LA SOUCHE.
-Les Amants magnifiques |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Les Amants magnifiques |HORACE|amant d’Agnès.
-Les Amants magnifiques |ALAIN|paysan|valet d’Arnolphe.
-Les Amants magnifiques |GEORGETTE|paysanne|servante d’Arnolphe.
-Les Amants magnifiques |CHRYSALDE|ami d’Arnolphe.
-Les Amants magnifiques |ENRIQUE|beau-frère de Chrysalde.
-Les Amants magnifiques |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Les Amants magnifiques |
-Le Bourgeois gentilhomme |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Bourgeois gentilhomme |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Bourgeois gentilhomme |HORACE|amant d’Agnès.
-Le Bourgeois gentilhomme |ALAIN|paysan|valet d’Arnolphe.
-Le Bourgeois gentilhomme |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Bourgeois gentilhomme |CHRYSALDE|ami d’Arnolphe.
-Le Bourgeois gentilhomme |ENRIQUE|beau-frère de Chrysalde.
-Le Bourgeois gentilhomme |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Bourgeois gentilhomme |
-Psyché |ARNOLPHE|autrement M. DE LA SOUCHE.
-Psyché |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Psyché |HORACE|amant d’Agnès.
-Psyché |ALAIN|paysan|valet d’Arnolphe.
-Psyché |GEORGETTE|paysanne|servante d’Arnolphe.
-Psyché |CHRYSALDE|ami d’Arnolphe.
-Psyché |ENRIQUE|beau-frère de Chrysalde.
-Psyché |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Psyché |
-Les Fourberies de Scapin |ARNOLPHE|autrement M. DE LA SOUCHE.
-Les Fourberies de Scapin |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Les Fourberies de Scapin |HORACE|amant d’Agnès.
-Les Fourberies de Scapin |ALAIN|paysan|valet d’Arnolphe.
-Les Fourberies de Scapin |GEORGETTE|paysanne|servante d’Arnolphe.
-Les Fourberies de Scapin |CHRYSALDE|ami d’Arnolphe.
-Les Fourberies de Scapin |ENRIQUE|beau-frère de Chrysalde.
-Les Fourberies de Scapin |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Les Fourberies de Scapin |
-La Comtesse d’Escarbagnas |ARNOLPHE|autrement M. DE LA SOUCHE.
-La Comtesse d’Escarbagnas |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-La Comtesse d’Escarbagnas |HORACE|amant d’Agnès.
-La Comtesse d’Escarbagnas |ALAIN|paysan|valet d’Arnolphe.
-La Comtesse d’Escarbagnas |GEORGETTE|paysanne|servante d’Arnolphe.
-La Comtesse d’Escarbagnas |CHRYSALDE|ami d’Arnolphe.
-La Comtesse d’Escarbagnas |ENRIQUE|beau-frère de Chrysalde.
-La Comtesse d’Escarbagnas |ORONTE|père d’Horace et grand ami d’Arnolphe.
-La Comtesse d’Escarbagnas |
-Les Femmes savantes |ARNOLPHE|autrement M. DE LA SOUCHE.
-Les Femmes savantes |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Les Femmes savantes |HORACE|amant d’Agnès.
-Les Femmes savantes |ALAIN|paysan|valet d’Arnolphe.
-Les Femmes savantes |GEORGETTE|paysanne|servante d’Arnolphe.
-Les Femmes savantes |CHRYSALDE|ami d’Arnolphe.
-Les Femmes savantes |ENRIQUE|beau-frère de Chrysalde.
-Les Femmes savantes |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Les Femmes savantes |
-Le Malade imaginaire |ARNOLPHE|autrement M. DE LA SOUCHE.
-Le Malade imaginaire |AGNÈS|jeune fille innocente|élevée par Arnolphe.
-Le Malade imaginaire |HORACE|amant d’Agnès.
-Le Malade imaginaire |ALAIN|paysan|valet d’Arnolphe.
-Le Malade imaginaire |GEORGETTE|paysanne|servante d’Arnolphe.
-Le Malade imaginaire |CHRYSALDE|ami d’Arnolphe.
-Le Malade imaginaire |ENRIQUE|beau-frère de Chrysalde.
-Le Malade imaginaire |ORONTE|père d’Horace et grand ami d’Arnolphe.
-Le Malade imaginaire |
+La Jalousie du Barbouillé|LE BARBOUILLÉ|mari d’Angélique
+La Jalousie du Barbouillé|ANGÉLIQUE|fille de Gorgibus
+La Jalousie du Barbouillé|VALÈRE|amant d’Angélique
+La Jalousie du Barbouillé|CATHAU|suivante d’Angélique
+La Jalousie du Barbouillé|GORGIBUS|père d’Angélique
+Le Médecin volant|VALÈRE|amant de Lucile
+Le Médecin volant|SABINE|cousine de Lucile
+Le Médecin volant|SGANARELLE|valet de Valère
+Le Médecin volant|GORGIBUS|père de Lucile
+Le Médecin volant|GROS-RENÉ|valet de Gorgibus
+Le Médecin volant|LUCILE|fille de Gorgibus
+L’Étourdi|LÉLIE|fils de Pandolphe
+L’Étourdi|CÉLIE|esclave de Trufaldin
+L’Étourdi|MASCARILLE|valet de Lélie
+L’Étourdi|HIPPOLYTE|fille d’Anselme
+L’Étourdi|ANSELME|vieillard
+L’Étourdi|TRUFALDIN|vieillard
+L’Étourdi|PANDOLPHE|vieillard
+L’Étourdi|LÉANDRE|fils de famille
+L’Étourdi|ANDRÈS|cru égyptien
+L’Étourdi|ERGASTE|valet
+Le Dépit amoureux|ÉRASTE|amant de Lucile
+Le Dépit amoureux|ALBERT|père de Lucile
+Le Dépit amoureux|GROS-RENÉ|valet d’Éraste
+Le Dépit amoureux|VALÈRE|fils de Polidore
+Le Dépit amoureux|LUCILE|fille d’Albert
+Le Dépit amoureux|MARINETTE|suivante de Lucile
+Le Dépit amoureux|POLIDORE|père de Valère
+Le Dépit amoureux|FROSINE|confidente d’Ascagne
+Le Dépit amoureux|ASCAGNE|fille sous l’habit d’homme
+Le Dépit amoureux|MASCARILLE|valet de Valère
+Le Dépit amoureux|MÉTAPHRASTE|pédant
+Le Dépit amoureux|LA RAPIÈRE|bretteur
+Les Précieuses ridicules|LA GRANGE|amant rebuté
+Les Précieuses ridicules|DU CROISY|amant rebuté
+Les Précieuses ridicules|GORGIBUS|bon bourgeois
+Les Précieuses ridicules|MAGDELON|fille de Gorgibus|précieuse ridicule
+Les Précieuses ridicules|CATHOS|nièce de Gorgibus|précieuse ridicule
+Les Précieuses ridicules|MAROTTE|servante des précieuses ridicules
+Les Précieuses ridicules|ALMANZOR|laquais des précieuses ridicules
+Les Précieuses ridicules|LE MARQUIS DE MASCARILLE|valet de la Grange
+Les Précieuses ridicules|LE VICOMTE DE JODELET|valet de du Croisy
+Sganarelle ou le Cocu imaginaire|GORGIBUS|bourgeois de Paris
+Sganarelle ou le Cocu imaginaire|CÉLIE|sa fille
+Sganarelle ou le Cocu imaginaire|LÉLIE|amant de Célie
+Sganarelle ou le Cocu imaginaire|GROS-RENÉ|valet de Lélie
+Sganarelle ou le Cocu imaginaire|SGANARELLE|bourgeois de Paris|et cocu imaginaire
+Sganarelle ou le Cocu imaginaire|VILLEBREQUIN|père de Valère
+Dom Garcie de Navarre|DOM GARCIE|prince de Navarre|amant d’Elvire
+Dom Garcie de Navarre|ELVIRE|princesse de Léon
+Dom Garcie de Navarre|ÉLISE|confidente d’Elvire
+Dom Garcie de Navarre|DOM ALFONSE|prince de Léon|cru prince de Castille|sous le nom de Dom Sylve
+Dom Garcie de Navarre|IGNÈS|comtesse|amante de Dom Sylve|aimée par Mauregat|usurpateur de l’État de Léon
+Dom Garcie de Navarre|DOM ALVAR|confident de Dom Garcie|amant d’Élise
+Dom Garcie de Navarre|DOM LOPE|autre confident de Dom Garcie|amant rebuté d’Élise
+Dom Garcie de Navarre|DOM PÈDRE|écuyer d’Ignès
+L’Ecole des femmes|ARNOLPHE|autrement M. DE LA SOUCHE
+L’Ecole des femmes|AGNÈS|jeune fille innocente|élevée par Arnolphe
+L’Ecole des femmes|HORACE|amant d’Agnès
+L’Ecole des femmes|ALAIN|paysan|valet d’Arnolphe
+L’Ecole des femmes|GEORGETTE|paysanne|servante d’Arnolphe
+L’Ecole des femmes|CHRYSALDE|ami d’Arnolphe
+L’Ecole des femmes|ENRIQUE|beau-frère de Chrysalde
+L’Ecole des femmes|ORONTE|père d’Horace et grand ami d’Arnolphe
+La Critique de L’École des femmes|GALOPIN|laquais
+La Critique de L’École des femmes|LYSIDAS|poète
+Le Mariage forcé|SGANARELLE|Molière
+Le Mariage forcé|GÉRONIMO|La Thorillière
+Le Mariage forcé|DORIMÈNE|Mademoiselle Du Parc
+Le Mariage forcé|ALCANTOR|Béjart
+Le Mariage forcé|LYCANTE|La Grange
+Le Mariage forcé|PREMIÈRE BOHÉMIENNE|Mademoiselle Béjart
+Le Mariage forcé|SECONDE BOHÉMIENNE|Mademoiselle de Brie
+Le Mariage forcé|PREMIER DOCTEUR|Brécourt
+Le Mariage forcé|SECOND DOCTEUR|Du Croisy
+Dom Juan|DOM JUAN|fils de Dom Louis
+Dom Juan|SGANARELLE|valet de Dom Juan
+Dom Juan|ELVIRE|femme de Dom Juan
+Dom Juan|GUSMAN|écuyer d’Elvire
+Dom Juan|DOM CARLOS|DOM ALONSE|frères d’Elvire
+Dom Juan|DOM LOUIS|père de Dom Juan
+Dom Juan|CHARLOTTE|MATHURINE|paysannes
+Dom Juan|PIERROT|paysan
+Dom Juan|LA VIOLETTE|RAGOTIN|laquais de Dom Juan
+Dom Juan|M. DIMANCHE|marchand
+Dom Juan|LA RAMÉE|spadassin
+Dom Juan|SUITE de Dom Carlos et de Dom Alonse|frères
+L’Amour Médecin|LA COMÉDIE|LA MUSIQUE ET LE BALLET
+L’Amour Médecin|Quittons|quittons notre vaine querelle
+L’Amour Médecin|De ses travaux|plus grands qu’on ne peut croire
+Le Misanthrope|ALCESTE|amant de Célimène
+Le Misanthrope|PHILINTE|ami d’Alceste
+Le Misanthrope|ORONTE|amant de Célimène
+Le Misanthrope|CÉLIMÈNE|amante d’Alceste
+Le Misanthrope|ÉLIANTE|cousine de Célimène
+Le Misanthrope|ARSINOÉ|amie de Célimène
+Le Misanthrope|BASQUE|valet de Célimène
+Le Misanthrope|DU BOIS|valet d’Alceste
+Le Médecin malgré lui|SGANARELLE|mari de Martine
+Le Médecin malgré lui|MARTINE|femme de Sganarelle
+Le Médecin malgré lui|M. ROBERT|voisin de Sganarelle
+Le Médecin malgré lui|VALÈRE|domestique de Géronte
+Le Médecin malgré lui|LUCAS|mari de Jacqueline
+Le Médecin malgré lui|GÉRONTE|père de Lucinde
+Le Médecin malgré lui|JACQUELINE|nourrice chez Géronte|et femme de Lucas
+Le Médecin malgré lui|LUCINDE|fille de Géronte
+Le Médecin malgré lui|LÉANDRE|amant de Lucinde
+Le Médecin malgré lui|THIBAUT|père de Perrin
+Le Médecin malgré lui|PERRIN|fils de Thibaut|paysan
+Mélicerte|ACANTE|amant de Daphné
+Mélicerte|TYRÈNE|amant d’Éroxène
+Mélicerte|DAPHNÉ|bergère
+Mélicerte|LYCARSIS|pâtre|cru père de Myrtil
+Mélicerte|MYRTIL|amant de Mélicerte
+Mélicerte|MÉLICERTE|Nymphe ou bergère|amante de Myrtil
+Mélicerte|CORINNE|confidente de Mélicerte
+Mélicerte|NICANDRE|berger
+Mélicerte|MOPSE|berger|cru oncle de Mélicerte
+Pastorale comique|IRIS|jeune bergère
+Pastorale comique|LYCAS|riche pasteur
+Pastorale comique|FILÈNE|riche pasteur
+Pastorale comique|CORIDON|jeune berger
+Le Sicilien ou l’Amour peintre|ADRASTE|gentilhomme français|amant d’Isidore
+Le Sicilien ou l’Amour peintre|DOM PÈDRE|Sicilien|amant d’Isidore
+Le Sicilien ou l’Amour peintre|ISIDORE|Grecque|esclave de Dom Pèdre
+Le Sicilien ou l’Amour peintre|CLIMÈNE|sœur d’Adraste
+Le Sicilien ou l’Amour peintre|HALI|valet d’Adraste
+Amphitryon|JUPITER|sous la forme d’Amphitryon
+Amphitryon|AMPHITRYON|général des Thébains
+Amphitryon|ALCMÈNE|femme d’Amphitryon
+Amphitryon|CLÉANTHIS|suivante d’Alcmène et femme de Sosie
+Amphitryon|SOSIE|valet d’Amphitryon
+Amphitryon|POSICLÈS|capitaines thébains
+George Dandin|GEORGE DANDIN|riche paysan|mari d’Angélique
+George Dandin|ANGÉLIQUE|femme de George Dandin et fille de M. de Sotenville
+George Dandin|MONSIEUR DE SOTENVILLE|gentilhomme campagnard|père d’Angélique
+George Dandin|MADAME DE SOTENVILLE|sa femme
+George Dandin|CLITANDRE|amoureux d’Angélique
+George Dandin|CLAUDINE|suivante d’Angélique
+George Dandin|LUBIN|paysan|servant Clitandre
+George Dandin|COLIN|valet de George Dandin
+L’Avare|HARPAGON|père de Cléante et d’Élise|et amoureux de Mariane
+L’Avare|CLÉANTE|fils d’Harpagon|amant de Mariane
+L’Avare|ÉLISE|fille d’Harpagon|amante de Valère
+L’Avare|VALÈRE|fils d’Anselme|et amant d’Élise
+L’Avare|MARIANE|amante de Cléante|et aimée d’Harpagon
+L’Avare|ANSELME|père de Valère|et de Mariane
+L’Avare|FROSINE|femme d’intrigue
+L’Avare|MAITRE SIMON|courtier
+L’Avare|MAITRE JACQUES|cuisinier et cocher d’Harpagon
+L’Avare|LA FLÈCHE|valet de Cléante
+L’Avare|DAME CLAUDE|servante d’Harpagon
+L’Avare|BRINDAVOINE|LA MERLUCHE|laquais d’Harpagon
+L’Avare|LE COMMISSAIRE|ET SON CLERC
+Monsieur de Pourceaugnac|JULIE|fille d’Oronte
+Monsieur de Pourceaugnac|NÉRINE|femme d’intrigue
+Monsieur de Pourceaugnac|LUCETTE|feinte Gasconne
+Monsieur de Pourceaugnac|ÉRASTE|amant de Julie
+Monsieur de Pourceaugnac|SBRIGANI|Napolitain|homme d’intrigue
+Monsieur de Pourceaugnac|PLUSIEURS MUSICIENS|JOUEURS D’INSTRUMENTS|ET DANSEURS
+Les Amants magnifiques|ARISTIONE|princesse|mère d’Ériphile
+Les Amants magnifiques|ÉRIPHILE|fille de la princesse
+Les Amants magnifiques|CLÉONICE|confidente d’Ériphile
+Les Amants magnifiques|CHORÈBE|de la suite de la princesse
+Les Amants magnifiques|IPHICRATE|TIMOCLÈS|amants magnifiques
+Les Amants magnifiques|SOSTRATE|général d’armée|amant d’Ériphile
+Les Amants magnifiques|CLITIDAS|plaisant de cour|de la suite d’Ériphile
+Les Amants magnifiques|ANAXARQUE|astrologue
+Les Amants magnifiques|CLÉON|fils d’Anaxarque
+Les Amants magnifiques|UNE FAUSSE VÉNUS|d’intelligence avec Anaxarque
+Le Bourgeois gentilhomme|MONSIEUR JOURDAIN|bourgeois
+Le Bourgeois gentilhomme|MADAME JOURDAIN|sa femme
+Le Bourgeois gentilhomme|LUCILE|fille de M. Jourdain
+Le Bourgeois gentilhomme|NICOLE|servante
+Le Bourgeois gentilhomme|CLÉONTE|amoureux de Lucile
+Le Bourgeois gentilhomme|COVIELLE|valet de Cléonte
+Le Bourgeois gentilhomme|DORANTE|comte|amant de Dorimène
+Le Bourgeois gentilhomme|DORIMÈNE|marquise
+Le Bourgeois gentilhomme|PLUSIEURS MUSICIENS|MUSICIENNES|JOUEURS D’INSTRUMENTS|DANSEURS|CUISINIERS|GARÇONS TAILLEURS|ET AUTRES PERSONNAGES DES INTERMÈDES ET DU BALLET
+Psyché|composé de Flore|Nymphes|Palæmon|Vertumne
+Psyché|Sylvains|Faunes|Dryades et Naïades
+Les Fourberies de Scapin|ARGANTE|père d’Octave et de Zerbinette
+Les Fourberies de Scapin|GÉRONTE|père de Léandre et de Hyacinte
+Les Fourberies de Scapin|OCTAVE|fils d’Argante|et amant de Hyacinte
+Les Fourberies de Scapin|LÉANDRE|fils de Géronte|et amant de Zerbinette
+Les Fourberies de Scapin|ZERBINETTE|crue Égyptienne|et reconnue fille d’Argante|et amante de Léandre
+Les Fourberies de Scapin|HYACINTE|fille de Géronte|et amante d’Octave
+Les Fourberies de Scapin|SCAPIN|valet de Léandre|et fourbe
+Les Fourberies de Scapin|SILVESTRE|valet d’Octave
+Les Fourberies de Scapin|NÉRINE|nourrice de Hyacinte
+Les Fourberies de Scapin|CARLE|fourbe
+La Comtesse d’Escarbagnas|LE COMTE|son fils
+La Comtesse d’Escarbagnas|LE VICOMTE|amant de Julie
+La Comtesse d’Escarbagnas|JULIE|amante du Vicomte
+La Comtesse d’Escarbagnas|MONSIEUR TIBAUDIER|conseiller|amant de la Comtesse
+La Comtesse d’Escarbagnas|MONSIEUR HARPIN|receveur des tailles|autre amant de la Comtesse
+La Comtesse d’Escarbagnas|MONSIEUR BOBINET|précepteur de Monsieur le Comte
+La Comtesse d’Escarbagnas|ANDRÉE|suivante de la Comtesse
+La Comtesse d’Escarbagnas|JEANNOT|laquais de Monsieur Tibaudier
+La Comtesse d’Escarbagnas|CRIQUET|laquais de la Comtesse
+Les Femmes savantes|CHRYSALE|bon Bourgeois
+Les Femmes savantes|PHILAMINTE|femme de Chrysale
+Les Femmes savantes|ARMANDE|HENRIETTE|filles de Chrysale et de Philaminte
+Les Femmes savantes|ARISTE|frère de Chrysale
+Les Femmes savantes|BÉLISE|sœur de Chrysale
+Les Femmes savantes|CLITANDRE|amant d’Henriette
+Les Femmes savantes|TRISSOTIN|bel esprit
+Les Femmes savantes|VADIUS|savant
+Les Femmes savantes|MARTINE|servante de cuisine
+Les Femmes savantes|L’ÉPINE|laquais de Trissotin
+Les Femmes savantes|JULIEN|valet de Vadius
+Le Malade imaginaire|Après les glorieuses fatigues|et les exploits victorieux de notre auguste monarque ; il est bien juste que tous ceux qui se mêlent d’écrire|travaillent ou à ses louanges|ou à son divertissement. C’est ce qu’ici l’on a voulu faire|et ce prologue est un essai des louanges de ce grand prince|qui donne entrée à la comédie du Malade imaginaire|dont le projet a été fait pour le délasser de ses nobles travaux
+Le Malade imaginaire|La décoration représente un lieu champêtre|et néanmoins fort agréable
