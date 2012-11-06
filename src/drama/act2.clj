@@ -13,7 +13,7 @@
 
 ;; list of [title date]
 (def plays
-  (a1/file->coll "resources/data/moliere_plays.txt" ))
+  (map vec (a1/file->coll "resources/data/moliere_plays.txt" )))
 
 ;; ## Some clean up
 ;; characters are some empty or last 2 columns should be join
@@ -28,16 +28,15 @@
 (def characters
   (keep (fn [r]
          (let [size (count r)]
-           (cond (< 3 size) (let [[a b & c] r] [a b (apply str c)])
-                 (= 3 size) r
+           (cond (< 3 size) (let [[a b & c] r] [a b (clojure.string/join " " c)])
+                 (= 3 size) (vec r)
                  :else nil)))
         (a1/file->coll "resources/data/moliere_characters.txt")))
 
 ;; ## Get all characters of a play
 (defn find-characters [title]
   (ca/??<- [?name ?desc]
-           (characters title ?name ?desc)
-           ))
+           (characters title ?name ?desc)))
 
 ;; ## Get all plays where a character is present
 ;; TODO sth wrong in the implicit join (all or nothing)
