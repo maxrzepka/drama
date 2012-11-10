@@ -7,7 +7,7 @@ The plot is in 3 act :
    * Question the data
    * Happy End : make a web site to present your results
 
-This project intend to be a gentle way to dive into clojure ecosystem.
+This project intends to be a gentle way to dive into clojure ecosystem.
 For now it contains cascalog , enlive and simple web dev in clojure.
 You may consider my other project https://github.com/maxrzepka/clojure-by-example to play with enlive selectors.
 
