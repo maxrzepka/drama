@@ -12,6 +12,7 @@
                  [net.cgrand/moustache "1.1.0"]
                  [cascalog "1.10.0"]
                  ]
-  :profiles {:dev {:dependencies [[org.apache.hadoop/hadoop-core "0.20.2-dev"]]}}
+  :profiles {:dev {:dependencies [[org.apache.hadoop/hadoop-core "0.20.2-dev"]
+                                  [lein-marginalia "0.7.1"]]}}
   :min-lein-version "2.0.0"
   :main drama.act3)
