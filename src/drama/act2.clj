@@ -1,7 +1,10 @@
-;; # Act 2 : ask
+;; # Act 2 : Let's play with data
 ;;
-;; Let's play with data
+;; Cascalog is used to query our data. It's build on top Hadoop and cascading but to use it
+;; you don't need to have any knowlegde on Hadoop ecosystem or map/reduce.
 ;;
+;; Most of the time Cascalog lets you deal with what you want to get
+;; and not with how to get it : declarative like SQL.
 (ns drama.act2
   (:require [drama.act1 :as a1]
             [cascalog.api :as ca]
@@ -9,42 +12,62 @@
             ))
 
 ;; ## Model
-;; play has title and date  , a character has name and desc
-
-;; list of [title date]
-(def plays
+;;
+;; A play has a title and a date  , a character has a name and a description
+;;
+(def plays "list of [title date]"
   (map vec (a1/file->coll "resources/data/moliere_plays.txt" )))
 
-;; ## Some clean up
-;; characters are some empty or last 2 columns should be join
-;; drama.act2> ((juxt first count) (filter #(< 3 (count %)) characters))
-;; [("La Jalousie du Barbouillé " "AGNÈS" "jeune fille innocente" "élevée par Arnolphe.") 99]
-;; drama.act2> ((juxt first count) (filter #(> 3 (count %)) characters))
-;; [("La Jalousie du Barbouillé ") 33]
-;; drama.act2> ((juxt first count) (filter #(= 3 (count %)) characters))
-;; [("La Jalousie du Barbouillé " "ARNOLPHE" "autrement M. DE LA SOUCHE.") 165]
-
-;; list of [title name desc]
-(def characters
+(def  characters
+  "List all records [title of the play, character's name , characters's desc ]
+The raw file contains some empty records or the last 2 columns should be merge
+"
   (keep (fn [r]
-         (let [size (count r)]
-           (cond (< 3 size) (let [[a b & c] r] [a b (clojure.string/join " " c)])
-                 (= 3 size) (vec r)
-                 :else nil)))
+          (let [size (count r)]
+            (cond (< 3 size) (let [[a b & c] r] [a b (clojure.string/join " " c)])
+                  (= 3 size) (vec r)
+                  :else nil)))
         (a1/file->coll "resources/data/moliere_characters.txt")))
 
-;; ## Get all characters of a play
-(defn find-characters [title]
+;; ## Some cascalog queries
+;;
+;; Any cascalog query has always these 3 parts :
+;;
+;; 1. how to define and execute queries `<-` `?<-` `??<-`. [Here details](https://github.com/nathanmarz/cascalog/wiki/Defining-and-executing-queries)
+;; 2. columns of the query
+;; 3. predicates : generator , operation , aggregator . [Here details](https://github.com/nathanmarz/cascalog/wiki/Guide-to-custom-operations)
+;;
+(defn find-characters
+  "Get All characters of a play"
+  [title]
   (ca/??<- [?name ?desc]
            (characters title ?name ?desc)))
 
-;; ## Get all plays where a character is present
-;; TODO sth wrong in the implicit join (all or nothing)
-(defn find-plays [name]
+(defn find-plays
+  "Get all the plays where a character is present : query using an implicit join"
+  [name]
   (ca/??<- [?title ?date]
            (plays ?title ?date)
-           (characters ?title name ?desc)
-           ))
+           (characters ?title name ?desc)))
 
-;; ## Top 5 of the most used characters
+(defn distinct-characters
+  "List all character with their number of occurences in plays"
+  []
+  (ca/??<- [?name ?ct]
+                  (characters ?title ?name ?desc)
+                  (co/count ?ct)))
 
+(defn top-n-characters
+  "Get the n most used characters"
+  [n]
+  (let [count-q (ca/<- [?name ?ct]
+                       (characters ?title ?name ?desc)
+                       (co/count ?ct))
+        q (co/first-n count-q n :sort ["?ct"] :reverse true)]
+    (ca/??- q)))
+
+;; ## Further topics
+;;
+;; 1. Files as Input / Output of queries
+;; 2. More about joins 
+;; 3. Create your own aggregate function
