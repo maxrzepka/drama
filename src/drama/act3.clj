@@ -1,19 +1,26 @@
 ;; # Act 3 Back to the web
 ;;
-;; * routing with moustache : in-depth into http://brehaut.net/blog/2011/ring_introduction
-;; * HTML templating with enlive
+;; Architecture in place :
+;; 1. Routing with moustache : [in-depth intro](http://brehaut.net/blog/2011/ring_introduction)
+;; 2. HTML templating with enlive
 (ns drama.act3
-  (:use [net.cgrand.moustache :only [app delegate]]
+  (:use [net.cgrand.moustache :only [app]]
         [ring.middleware.file :only [wrap-file]]
-        [ring.util.response :only [response content-type]]
-        [ring.middleware.stacktrace :only [wrap-stacktrace]]
+        [ring.util.codec :only [url-decode]]
+        [ring.util.response :only [response content-type file-response]]
         [ring.adapter.jetty :only [run-jetty]])
   (:require [net.cgrand.enlive-html :as h]
             [drama.act2 :as a2]))
 
+
+;; ## Enlive templating System
+;;
+;; It's based on 2 macros `defsnippet` and `deftemplate` defining fct returning a sequence of string
+;;
+
 (h/defsnippet list-item "list.html" [:div#main :ul :li]
-  [{:keys [id text]}]
-  [:a] (h/do-> (h/set-attr :href (str "/" id) ) (h/content id))
+  [{:keys [title text nolink]} ]
+  [:a] (h/do-> (if nolink identity (h/set-attr :href (str "/" title) )) (h/content title))
   [:span] (h/content text))
 
 
@@ -28,30 +35,7 @@
                      (h/substitute "")))
 
 (defn vec->item [[t d]]
-  {:id t :text d})
-
-;; Example of a middleware in Ring
-;; taken from git://github.com/myfreeweb/ringfinger.git
-;; ringfinger /corefinger/src/main/clojure/corefinger/middleware.clj
-(defn wrap-logging
-  "simple logging handler
-"
-  [handler & {:keys [output keys-filter]
-              :or {output :stdout
-                   keys-filter [:status :uri :remote-addr :request-method]}}]
-  (fn [req]
-    (let [res (handler req)
-          logger (cond
-                  (= output :stdout) println
-                  (= output :stderr) #(binding [*out* *err*]
-                                        (println %))
-                  (string? output) #(spit output (str % "\n") :append true)
-                  (fn? output) output)
-          entry (-> (select-keys (merge req res) keys-filter)
-                    pr-str
-                    (.replace "\\" ""))]
-      (logger entry)
-      res)))
+  {:title t :text d})
 
 (defn render
   "render view in utf-8"
@@ -60,18 +44,57 @@
    (response body)
    "text/html ; charset=utf-8"))
 
-;; To test your routes from the REPL :
-;;  (routes {:uri "/" :request-method :get})
+;; ## Routing requests
+;;
+;; Ring is a perfect example of the motto "data and functions", it consists of
+;;
+;; 1. request and response are the datas
+;; 2. handler returns a response given a request
+;; 3. middleware are High-Order function : it takes a handler as first parameter
+;; and returns a new handler function
+;;
+;; [More details](https://github.com/mmcgrana/ring/wiki/Concepts)
+;;
+;;
 (def routes
+  "Describe the behaviour of the web app : how to handle each incoming request.
+app is the main function of moustache it consists of 2 parts :
+
+  1. middlewares
+  2. routes defined as
+Test your routes from the REPL : `(routes {:uri \"/\" :request-method :get})`
+[More details](https://github.com/cgrand/moustache)
+"
   (app
-   (wrap-stacktrace)
-   (wrap-logging)
    (wrap-file "resources") ;; to get CSS files
    [""] (fn [req] (render (main "Molière Works" (map vec->item a2/plays))))
-   [id &] (fn [req] (render (main id  (map vec->item (a2/find-characters id)))))))
+   [play &] (fn [req] (render (main play (map vec->item (a2/find-characters play)))))))
 
-(defn start [ & [port & options]]
-  (run-jetty (var routes) {:port (or port 8080) :join? false}))
+(defn generate-pages
+  "Generate HTML pages for each play"
+  []
+  (doseq [[title _] a2/plays]
+    (spit (str "resources/generated/" title ".html")
+          (apply str (main title
+                           (map #(assoc (vec->item %) :nolink 1)
+                                (a2/find-characters title)))))))
+
+(def baked-routes
+  "Here instead of running a cascalog query to get the list of characters, just get the generated page"
+  (app
+   (wrap-file "resources")
+   [""] (fn [req] (render (main "Molière Works" (map vec->item a2/plays))))
+   [play &] (fn [req]
+              (let [name (.substring ^String (url-decode (:uri req)) 1)]
+                (file-response (str "/generated/" play ".html")
+                               {:root "resources" :index-files? true :allow-symlinks? false})))))
+
+(defn start
+  "Usual function to start Jetty server with your routes. 
+Note `(var routes)` instead `routes` allows to do interactive web dev
+"
+  [ & [port & options]]
+  (run-jetty (var baked-routes) {:port (or port 8080) :join? false}))
 
 (defn -main []
   (let [port (try (Integer/parseInt (System/getenv "PORT"))
