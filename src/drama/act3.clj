@@ -1,8 +1,10 @@
 ;; # Act 3 Back to the web
 ;;
 ;; Architecture in place :
-;; 1. Routing with moustache : [in-depth intro](http://brehaut.net/blog/2011/ring_introduction)
-;; 2. HTML templating with enlive
+;;
+;; 1. HTML templating with enlive
+;; 2. Routing with moustache : [in-depth intro](http://brehaut.net/blog/2011/ring_introduction)
+;;
 (ns drama.act3
   (:use [net.cgrand.moustache :only [app]]
         [ring.middleware.file :only [wrap-file]]
@@ -15,7 +17,7 @@
 
 ;; ## Enlive templating System
 ;;
-;; It's based on 2 macros `defsnippet` and `deftemplate` defining fct returning a sequence of string
+;; It's based on 2 macros `defsnippet` and `deftemplate` both are defining a fct returning a sequence of strings
 ;;
 
 (h/defsnippet list-item "list.html" [:div#main :ul :li]
@@ -48,30 +50,31 @@
 ;;
 ;; Ring is a perfect example of the motto "data and functions", it consists of
 ;;
-;; 1. request and response are the datas
+;; 1. the request and response are the data
 ;; 2. handler returns a response given a request
-;; 3. middleware are High-Order function : it takes a handler as first parameter
+;; 3. middleware is High-Order function : it takes a handler as first parameter
 ;; and returns a new handler function
 ;;
 ;; [More details](https://github.com/mmcgrana/ring/wiki/Concepts)
 ;;
+;;  `routes` describes the behaviour of the web app : how to handle each incoming request.
+;; `app` is the main function of moustache, it consists of 2 parts :
+;;
+;; 1. middlewares
+;; 2. routes 
+;;
+;; Test your routes from the REPL : `(routes {:uri \"/\" :request-method :get})`
+;;
+;; [More details](https://github.com/cgrand/moustache)
 ;;
 (def routes
-  "Describe the behaviour of the web app : how to handle each incoming request.
-app is the main function of moustache it consists of 2 parts :
-
-  1. middlewares
-  2. routes defined as
-Test your routes from the REPL : `(routes {:uri \"/\" :request-method :get})`
-[More details](https://github.com/cgrand/moustache)
-"
   (app
    (wrap-file "resources") ;; to get CSS files
    [""] (fn [req] (render (main "Molière Works" (map vec->item a2/plays))))
    [play &] (fn [req] (render (main play (map vec->item (a2/find-characters play)))))))
 
 (defn generate-pages
-  "Generate HTML pages for each play"
+  "Generates HTML pages for each play"
   []
   (doseq [[title _] a2/plays]
     (spit (str "resources/generated/" title ".html")
@@ -80,7 +83,7 @@ Test your routes from the REPL : `(routes {:uri \"/\" :request-method :get})`
                                 (a2/find-characters title)))))))
 
 (def baked-routes
-  "Here instead of running a cascalog query to get the list of characters, just get the generated page"
+  "Here instead of running a cascalog query to get the list of characters, it gets the generated page"
   (app
    (wrap-file "resources")
    [""] (fn [req] (render (main "Molière Works" (map vec->item a2/plays))))
@@ -90,8 +93,8 @@ Test your routes from the REPL : `(routes {:uri \"/\" :request-method :get})`
                                {:root "resources" :index-files? true :allow-symlinks? false})))))
 
 (defn start
-  "Usual function to start Jetty server with your routes. 
-Note `(var routes)` instead `routes` allows to do interactive web dev
+  "Starts Jetty server with your routes. 
+Note `(var routes)` allows to do interactive web development
 "
   [ & [port & options]]
   (run-jetty (var baked-routes) {:port (or port 8080) :join? false}))

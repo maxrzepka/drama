@@ -1,8 +1,7 @@
-;; # Act I : scraping web pages with enlive
+;; # Act I : Scraping web pages with enlive
 ;;
-;; The goal is to get all plays and their characters
-;; from some well-known writer (here the french Molière)
-;;
+;; The goal is to retrieve all theater plays by a famous author (Here the french Molière from the 17th century)
+;; and the characters from those plays.
 ;; (source : toutmoliere.net)
 (ns drama.act1
   (:require  [net.cgrand.enlive-html :as h]
@@ -10,19 +9,19 @@
 
 ;; ## Enlive selector
 ;;
-;; Enlive is templating system working in the following lines :
+;; Enlive is a templating system working as in the following lines :
 ;;
-;; 1. plain HTML no special tags inside
-;; 2. HTML page are converted to a tree of nodes like `{:tag :a :attrs {:href "/"} :content () }`
-;; 3. enlive gives methods to select and transform this tree structure
+;; 1. plain HTML without any special tags
+;; 2. HTML pages are converted to a tree of nodes, like `{:tag :a :attrs {:href "/"} :content () }`
+;; 3. Enlive provides functions to select and transform the above mentioned tree structure.
 ;;
 ;; Web scraping with enlive are done in 2 steps :
 ;;
-;; 1. use enlive selectors to find the part of HTML page containing wanted informations
-;; 2. with normal function extract the infos from nodes structure
+;; 1. Use enlive selectors to find the part of HTML page containing the requested information
+;; 2. Common function extract the infos from the nodes
 
 (defn resource
-  "Small utility function to convert something into nodes"
+  "Converts a source (url , file or string) into nodes"
   [s]
   (let [r (cond
             (.startsWith s "http:") (java.net.URL. s)
@@ -33,21 +32,21 @@
 (def moliere "http://toutmoliere.net/")
 
 ;; ## Extract all plays
-
+;;
 ;; Typical scraping structure is done in 2 steps : select and extract
 ;;
-;; Enlive selector are plain clj data structure giving a flexible to express your HTML selection
+;; Enlive selectors are a flexible way to express your HTML selection
 ;;
-;; The syntax can be at first sight a bit confusing but in fact driven by simple rules :
+;; The syntax can be at first sight a bit confusing, but in fact following simple rules :
 ;;
-;; 1. any selector is always inside a [] meaning inclusion
+;; 1. any selector is always inside a [] . In this case [] means inclusion
 ;; 2. inner [] means `and` for example in `[:li [:a (h/attr= :href "/")]]`
-;; 3. Follows mostly CSS convention
+;; 3. Follows CSS syntax
 ;;
 ;; [More details](https://github.com/cgrand/enlive/wiki)
 ;;
 (defn extract-plays
-  "Extract list of plays from http://toutmoliere.net/oeuvres.html
+  "Extracts the list of plays by the author from http://toutmoliere.net/oeuvres.html
 in local resources/data/oeuvres.html
 "
   [url]
@@ -61,7 +60,7 @@ in local resources/data/oeuvres.html
 
 ;; ## Extract the characters
 ;;
-;; More involved logic : from play's main page  go to play's act 1 and then extract list of characters
+;; Involves a more complex logic : from the play's main page, go to play's act 1 page and then extract the list of characters from there.
 ;;
 ;; 2 samples pages are available in local :
 ;; resources/data/{ecoledesfemmes.html,ecoledesfemmes_acte1.html}
@@ -95,7 +94,7 @@ in local resources/data/oeuvres.html
 ;; ## Put it all together
 
 (defn append-characters
-  "Associate to a play his characters"
+  "Associate the characters to a play"
   [{u :url :as play}]
   (let [curl (characters-url (resource u))
         chars (extract-characters (resource curl))]
@@ -116,7 +115,7 @@ in local resources/data/oeuvres.html
   (spit f (apply str (map #(str (s/join separator %) "\n") coll))))
 
 (defn file->coll
-  "Return an list of vectors by default and of maps if header given"
+  "Returns a list of vectors. If the header is supplied, it returns a list of maps"
   [f & {:keys [separator header] :or {separator "|"}}]
   (let [lines (.split (slurp f) "\n")
         separator ({"|" "\\|"} separator separator)

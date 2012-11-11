@@ -1,10 +1,11 @@
 ;; # Act 2 : Let's play with data
 ;;
-;; Cascalog is used to query our data. It's build on top Hadoop and cascading but to use it
-;; you don't need to have any knowlegde on Hadoop ecosystem or map/reduce.
+;; Cascalog is used to query our data. It's build on top Hadoop and cascading
+;; but you don't need to have any knowlegde on Hadoop ecosystem or map/reduce in order to use it.
 ;;
-;; Most of the time Cascalog lets you deal with what you want to get
-;; and not with how to get it : declarative like SQL.
+;; Most of the time Cascalog lets you concentrate on "what" you want
+;; instead of "how" : it's declarative like SQL.
+;;
 (ns drama.act2
   (:require [drama.act1 :as a1]
             [cascalog.api :as ca]
@@ -20,7 +21,7 @@
 
 (def  characters
   "List all records [title of the play, character's name , characters's desc ]
-The raw file contains some empty records or the last 2 columns should be merge
+Clean up the raw file : skip empty records , merge columns if more than expected
 "
   (keep (fn [r]
           (let [size (count r)]
