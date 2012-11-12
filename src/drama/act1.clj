@@ -50,7 +50,7 @@
 in local resources/data/oeuvres.html
 "
   [url]
-  (let [nodes (h/select (resource url) [:div#centre :div#liste1 :ul.listerub :li :a])
+  (let [nodes (h/select (resource url) [:div#liste1 :ul.listerub :li :a])
         extract (fn [n]
                     {:url (str moliere (-> n :attrs :href))
                      :title (-> n :content first s/trim)
