@@ -13,7 +13,6 @@
             ))
 
 ;; ## Model
-;;
 ;; A play has a title and a date  , a character has a name and a description
 ;;
 (def plays "list of [title date]"
@@ -31,7 +30,6 @@ Clean up the raw file : skip empty records , merge columns if more than expected
         (a1/file->coll "resources/data/moliere_characters.txt")))
 
 ;; ## Some cascalog queries
-;;
 ;; Any cascalog query has always these 3 parts :
 ;;
 ;; 1. how to define and execute queries `<-` `?<-` `??<-`. [Here details](https://github.com/nathanmarz/cascalog/wiki/Defining-and-executing-queries)
@@ -70,5 +68,5 @@ Clean up the raw file : skip empty records , merge columns if more than expected
 ;; ## Further topics
 ;;
 ;; 1. Files as Input / Output of queries
-;; 2. More about joins 
+;; 2. More about joins
 ;; 3. Create your own aggregate function

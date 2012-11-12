@@ -3060,10 +3060,7 @@ and the characters from those plays.
             (.exists (java.io.File. s)) (java.io.File. s)
             :else s)]
     (if (not (string? r)) (h/html-resource r) (h/html-snippet r))))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(def moliere &quot;http://toutmoliere.net/&quot;)</pre></td></tr><tr><td class="docs"><p>Extracts the list of plays by the author from http://toutmoliere.net/oeuvres.html
-in local resources/data/oeuvres.html</p>
-
-<h2>Extract all plays</h2>
+</td><td class="codes"><pre class="brush: clojure">(def moliere &quot;http://toutmoliere.net/&quot;)</pre></td></tr><tr><td class="docs"><h2>Extract all plays</h2>
 
 <p>Typical scraping structure is done in 2 steps : select and extract</p>
 
@@ -3078,6 +3075,8 @@ in local resources/data/oeuvres.html</p>
 </ol>
 
 <p><a href="https://github.com/cgrand/enlive/wiki">More details</a></p>
+</td><td class="codes"></td></tr><tr><td class="docs"><p>Extracts the list of plays by the author from http://toutmoliere.net/oeuvres.html
+in local resources/data/oeuvres.html</p>
 </td><td class="codes"><pre class="brush: clojure">(defn extract-plays
   [url]
   (let [nodes (h/select (resource url) [:div#liste1 :ul.listerub :li :a])
@@ -3295,7 +3294,7 @@ and returns a new handler function</li>
    [play &amp;] (fn [req]
               (let [name (.substring ^String (url-decode (:uri req)) 1)]
                 (file-response (str &quot;/generated/&quot; play &quot;.html&quot;)
-                               {:root &quot;resources&quot; :index-files? true :allow-symlinks? false})))))</pre></td></tr><tr><td class="docs"><p>Starts Jetty server with your routes. 
+                               {:root &quot;resources&quot; :index-files? true :allow-symlinks? false})))))</pre></td></tr><tr><td class="docs"><p>Starts Jetty server with your routes.
 Note <code>(var routes)</code> allows to do interactive web development</p>
 </td><td class="codes"><pre class="brush: clojure">(defn start
   [ &amp; [port &amp; options]]

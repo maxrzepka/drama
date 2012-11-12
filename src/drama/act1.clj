@@ -32,7 +32,6 @@
 (def moliere "http://toutmoliere.net/")
 
 ;; ## Extract all plays
-;;
 ;; Typical scraping structure is done in 2 steps : select and extract
 ;;
 ;; Enlive selectors are a flexible way to express your HTML selection
@@ -44,7 +43,7 @@
 ;; 3. Follows CSS syntax
 ;;
 ;; [More details](https://github.com/cgrand/enlive/wiki)
-;;
+
 (defn extract-plays
   "Extracts the list of plays by the author from http://toutmoliere.net/oeuvres.html
 in local resources/data/oeuvres.html
@@ -59,7 +58,6 @@ in local resources/data/oeuvres.html
     (map extract nodes)))
 
 ;; ## Extract the characters
-;;
 ;; Involves a more complex logic : from the play's main page, go to play's act 1 page and then extract the list of characters from there.
 ;;
 ;; 2 samples pages are available in local :

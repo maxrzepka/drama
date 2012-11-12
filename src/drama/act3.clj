@@ -61,7 +61,7 @@
 ;; `app` is the main function of moustache, it consists of 2 parts :
 ;;
 ;; 1. middlewares
-;; 2. routes 
+;; 2. routes
 ;;
 ;; Test your routes from the REPL : `(routes {:uri \"/\" :request-method :get})`
 ;;
@@ -93,7 +93,7 @@
                                {:root "resources" :index-files? true :allow-symlinks? false})))))
 
 (defn start
-  "Starts Jetty server with your routes. 
+  "Starts Jetty server with your routes.
 Note `(var routes)` allows to do interactive web development
 "
   [ & [port & options]]

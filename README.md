@@ -9,7 +9,10 @@ The plot is in 3 act :
 
 This project intends to be a gentle way to dive into clojure ecosystem.
 For now it contains cascalog , enlive and simple web dev in clojure.
-You may consider my other project https://github.com/maxrzepka/clojure-by-example to play with enlive selectors.
+
+A html source transcript is also available http://maxrzepka.github.com/drama/doc.html
+
+You may consider my other project https://github.com/maxrzepka/clojure-by-example to play with enlive selectors on [heroku](http://cold-dusk-9608.herokuapp.com/).
 
 
 ## Act 1
