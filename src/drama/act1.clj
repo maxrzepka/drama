@@ -73,23 +73,31 @@ in local resources/data/oeuvres.html
        (str moliere)
       ))
 
-;;
-;; A bit more tricky here, HTML pages are not always well structured
-;;
 (defn extract-characters
-  "Returns a list of vectors [name , description]
+  "Returns a list of characters [name , description].
+Here it's bit more trickier : various cases to handle
 "
   [nodes]
-  (let [items (h/select
+  (let [selector1 [:div#centre_texte :div :div h/text-node]
+        selector2 [:div#centre_texte
+                   [:div h/first-of-type]
+                   [:table h/first-of-type] :tr]
+        items (h/select
                nodes
-               [:div#centre_texte :div :div h/text-node])
-        items (s/split-lines (apply str items)) ;;one line = one character
+               selector1)
+        items (if (< 1 (count items))
+                (s/split-lines (apply str items));;one line = one character
+                (map h/text (h/select nodes selector2)))
         trim (fn [s] (-> s
                          (s/replace-first #"^[,. ]+" "") ;trim left
                          (s/replace-first #"[,. ]+$" "") ;trim right
-                         ))]
-    ;;first comma separates the character's name from the description
-    (map (fn [l] (mapv trim (s/split l #"," 2))) items)))
+                         ))
+        extractor (fn [s]
+                    (map (partial s/join " ")
+                         (split-with #(= (.toUpperCase %) %)
+                                     (s/split (trim s) #"[,. ]+"))))
+        validate (fn [c] (when (not (empty? (first c))) c))]
+    (keep (comp validate extractor) items)))
 
 ;; ## Put it all together
 ;;
