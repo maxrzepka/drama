@@ -76,21 +76,23 @@ in local resources/data/oeuvres.html
 ;;
 ;; A bit more tricky here, HTML pages are not always well structured
 ;;
-;; TODO : can be improved
 (defn extract-characters
-  ""
+  "Returns a list of vectors [name , description]
+"
   [nodes]
-  (let [items (keep #(when-not (= :br (:tag %)) (h/text %))
-                    (:content (first (h/select nodes [:div#centre_texte :div :div]))))
+  (let [items (h/select
+               nodes
+               [:div#centre_texte :div :div h/text-node])
+        items (s/split-lines (apply str items)) ;;one line = one character
         trim (fn [s] (-> s
                          (s/replace-first #"^[,. ]+" "") ;trim left
                          (s/replace-first #"[,. ]+$" "") ;trim right
                          ))]
-    (map (fn [l] (mapv trim (s/split l #",")))
-         (s/split-lines (apply str items)))))
+    ;;first comma separates the character's name from the description
+    (map (fn [l] (mapv trim (s/split l #"," 2))) items)))
 
 ;; ## Put it all together
-
+;;
 (defn append-characters
   "Associate the characters to a play"
   [{u :url :as play}]
@@ -101,7 +103,11 @@ in local resources/data/oeuvres.html
       :characters chars)))
 
 (defn all-in-one
-  "Returns a lazy-sequence ie only fetch the data when requested"
+  "Returns all informations wanted as a lazy-sequence
+ie only fetch the data when requested.
+
+Please use it with caution as it scrapes more than 60 web pages.
+"
   []
   (map append-characters
    (extract-plays "http://toutmoliere.net/oeuvres.html")))
@@ -123,15 +129,23 @@ in local resources/data/oeuvres.html
                      (map #(.trim %) (.split l separator))))]
     (map cut lines)))
 
-(defn plays->file [plays]
+(defn plays->file
+  "Loads into resources/data/moliere_plays.txt all plays."
+  [plays]
   (coll->file "resources/data/moliere_plays.txt"
              (map (juxt :title :date) plays)))
 
-(defn characters->file [plays]
-  (coll->file "resources/data/moliere_characters.txt"
-             (mapcat (fn [{cs :characters t :title :as p}]
-                     (keep (fn [c] (when (< 1 (count c)) (cons t c))) cs))
-                     plays)))
+(defn characters->file
+  "Loads into resources/data/moliere_characters.txt all characters.
+Skip invalid characters"
+  [plays]
+  (let [valid? (fn [c] (and (< 1 (count c))
+                            (= (first c) (.toUpperCase (first c)))))]
+    (coll->file "resources/data/moliere_characters.txt"
+                      (mapcat (fn [{cs :characters t :title}]
+                                (keep (fn [c] (when (valid? c) (cons t c)))
+                                      cs))
+                              plays))))
 
 ;; ## Further information on enlive
 ;;

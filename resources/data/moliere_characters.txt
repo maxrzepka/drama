@@ -34,8 +34,8 @@ Le Dépit amoureux|LA RAPIÈRE|bretteur
 Les Précieuses ridicules|LA GRANGE|amant rebuté
 Les Précieuses ridicules|DU CROISY|amant rebuté
 Les Précieuses ridicules|GORGIBUS|bon bourgeois
-Les Précieuses ridicules|MAGDELON|fille de Gorgibus|précieuse ridicule
-Les Précieuses ridicules|CATHOS|nièce de Gorgibus|précieuse ridicule
+Les Précieuses ridicules|MAGDELON|fille de Gorgibus, précieuse ridicule
+Les Précieuses ridicules|CATHOS|nièce de Gorgibus, précieuse ridicule
 Les Précieuses ridicules|MAROTTE|servante des précieuses ridicules
 Les Précieuses ridicules|ALMANZOR|laquais des précieuses ridicules
 Les Précieuses ridicules|LE MARQUIS DE MASCARILLE|valet de la Grange
@@ -44,21 +44,21 @@ Sganarelle ou le Cocu imaginaire|GORGIBUS|bourgeois de Paris
 Sganarelle ou le Cocu imaginaire|CÉLIE|sa fille
 Sganarelle ou le Cocu imaginaire|LÉLIE|amant de Célie
 Sganarelle ou le Cocu imaginaire|GROS-RENÉ|valet de Lélie
-Sganarelle ou le Cocu imaginaire|SGANARELLE|bourgeois de Paris|et cocu imaginaire
+Sganarelle ou le Cocu imaginaire|SGANARELLE|bourgeois de Paris, et cocu imaginaire
 Sganarelle ou le Cocu imaginaire|VILLEBREQUIN|père de Valère
-Dom Garcie de Navarre|DOM GARCIE|prince de Navarre|amant d’Elvire
+Dom Garcie de Navarre|DOM GARCIE|prince de Navarre, amant d’Elvire
 Dom Garcie de Navarre|ELVIRE|princesse de Léon
 Dom Garcie de Navarre|ÉLISE|confidente d’Elvire
-Dom Garcie de Navarre|DOM ALFONSE|prince de Léon|cru prince de Castille|sous le nom de Dom Sylve
-Dom Garcie de Navarre|IGNÈS|comtesse|amante de Dom Sylve|aimée par Mauregat|usurpateur de l’État de Léon
-Dom Garcie de Navarre|DOM ALVAR|confident de Dom Garcie|amant d’Élise
-Dom Garcie de Navarre|DOM LOPE|autre confident de Dom Garcie|amant rebuté d’Élise
+Dom Garcie de Navarre|DOM ALFONSE|prince de Léon, cru prince de Castille, sous le nom de Dom Sylve
+Dom Garcie de Navarre|IGNÈS|comtesse, amante de Dom Sylve, aimée par Mauregat, usurpateur de l’État de Léon
+Dom Garcie de Navarre|DOM ALVAR|confident de Dom Garcie, amant d’Élise
+Dom Garcie de Navarre|DOM LOPE|autre confident de Dom Garcie, amant rebuté d’Élise
 Dom Garcie de Navarre|DOM PÈDRE|écuyer d’Ignès
 L’Ecole des femmes|ARNOLPHE|autrement M. DE LA SOUCHE
-L’Ecole des femmes|AGNÈS|jeune fille innocente|élevée par Arnolphe
+L’Ecole des femmes|AGNÈS|jeune fille innocente, élevée par Arnolphe
 L’Ecole des femmes|HORACE|amant d’Agnès
-L’Ecole des femmes|ALAIN|paysan|valet d’Arnolphe
-L’Ecole des femmes|GEORGETTE|paysanne|servante d’Arnolphe
+L’Ecole des femmes|ALAIN|paysan, valet d’Arnolphe
+L’Ecole des femmes|GEORGETTE|paysanne, servante d’Arnolphe
 L’Ecole des femmes|CHRYSALDE|ami d’Arnolphe
 L’Ecole des femmes|ENRIQUE|beau-frère de Chrysalde
 L’Ecole des femmes|ORONTE|père d’Horace et grand ami d’Arnolphe
@@ -77,17 +77,14 @@ Dom Juan|DOM JUAN|fils de Dom Louis
 Dom Juan|SGANARELLE|valet de Dom Juan
 Dom Juan|ELVIRE|femme de Dom Juan
 Dom Juan|GUSMAN|écuyer d’Elvire
-Dom Juan|DOM CARLOS|DOM ALONSE|frères d’Elvire
+Dom Juan|DOM CARLOS|DOM ALONSE, frères d’Elvire
 Dom Juan|DOM LOUIS|père de Dom Juan
-Dom Juan|CHARLOTTE|MATHURINE|paysannes
+Dom Juan|CHARLOTTE|MATHURINE, paysannes
 Dom Juan|PIERROT|paysan
-Dom Juan|LA VIOLETTE|RAGOTIN|laquais de Dom Juan
+Dom Juan|LA VIOLETTE|RAGOTIN, laquais de Dom Juan
 Dom Juan|M. DIMANCHE|marchand
 Dom Juan|LA RAMÉE|spadassin
-Dom Juan|SUITE de Dom Carlos et de Dom Alonse|frères
 L’Amour Médecin|LA COMÉDIE|LA MUSIQUE ET LE BALLET
-L’Amour Médecin|Quittons|quittons notre vaine querelle
-L’Amour Médecin|De ses travaux|plus grands qu’on ne peut croire
 Le Misanthrope|ALCESTE|amant de Célimène
 Le Misanthrope|PHILINTE|ami d’Alceste
 Le Misanthrope|ORONTE|amant de Célimène
@@ -102,27 +99,30 @@ Le Médecin malgré lui|M. ROBERT|voisin de Sganarelle
 Le Médecin malgré lui|VALÈRE|domestique de Géronte
 Le Médecin malgré lui|LUCAS|mari de Jacqueline
 Le Médecin malgré lui|GÉRONTE|père de Lucinde
-Le Médecin malgré lui|JACQUELINE|nourrice chez Géronte|et femme de Lucas
+Le Médecin malgré lui|JACQUELINE|nourrice chez Géronte, et femme de Lucas
 Le Médecin malgré lui|LUCINDE|fille de Géronte
 Le Médecin malgré lui|LÉANDRE|amant de Lucinde
 Le Médecin malgré lui|THIBAUT|père de Perrin
-Le Médecin malgré lui|PERRIN|fils de Thibaut|paysan
+Le Médecin malgré lui|PERRIN|fils de Thibaut, paysan
 Mélicerte|ACANTE|amant de Daphné
 Mélicerte|TYRÈNE|amant d’Éroxène
 Mélicerte|DAPHNÉ|bergère
-Mélicerte|LYCARSIS|pâtre|cru père de Myrtil
+Mélicerte|LYCARSIS|pâtre, cru père de Myrtil
 Mélicerte|MYRTIL|amant de Mélicerte
-Mélicerte|MÉLICERTE|Nymphe ou bergère|amante de Myrtil
+Mélicerte|MÉLICERTE|Nymphe ou bergère, amante de Myrtil
 Mélicerte|CORINNE|confidente de Mélicerte
 Mélicerte|NICANDRE|berger
-Mélicerte|MOPSE|berger|cru oncle de Mélicerte
+Mélicerte|MOPSE|berger, cru oncle de Mélicerte
 Pastorale comique|IRIS|jeune bergère
 Pastorale comique|LYCAS|riche pasteur
 Pastorale comique|FILÈNE|riche pasteur
 Pastorale comique|CORIDON|jeune berger
-Le Sicilien ou l’Amour peintre|ADRASTE|gentilhomme français|amant d’Isidore
-Le Sicilien ou l’Amour peintre|DOM PÈDRE|Sicilien|amant d’Isidore
-Le Sicilien ou l’Amour peintre|ISIDORE|Grecque|esclave de Dom Pèdre
+Pastorale comique|BERGERS : LE ROI|
+Pastorale comique|BERGÈRES : MADAME|
+Pastorale comique|CINQUIÈME ENTRÉEALEXANDRE ET PORUS|CINQ GRECS
+Le Sicilien ou l’Amour peintre|ADRASTE|gentilhomme français, amant d’Isidore
+Le Sicilien ou l’Amour peintre|DOM PÈDRE|Sicilien, amant d’Isidore
+Le Sicilien ou l’Amour peintre|ISIDORE|Grecque, esclave de Dom Pèdre
 Le Sicilien ou l’Amour peintre|CLIMÈNE|sœur d’Adraste
 Le Sicilien ou l’Amour peintre|HALI|valet d’Adraste
 Amphitryon|JUPITER|sous la forme d’Amphitryon
@@ -131,40 +131,40 @@ Amphitryon|ALCMÈNE|femme d’Amphitryon
 Amphitryon|CLÉANTHIS|suivante d’Alcmène et femme de Sosie
 Amphitryon|SOSIE|valet d’Amphitryon
 Amphitryon|POSICLÈS|capitaines thébains
-George Dandin|GEORGE DANDIN|riche paysan|mari d’Angélique
+George Dandin|GEORGE DANDIN|riche paysan, mari d’Angélique
 George Dandin|ANGÉLIQUE|femme de George Dandin et fille de M. de Sotenville
-George Dandin|MONSIEUR DE SOTENVILLE|gentilhomme campagnard|père d’Angélique
+George Dandin|MONSIEUR DE SOTENVILLE|gentilhomme campagnard, père d’Angélique
 George Dandin|MADAME DE SOTENVILLE|sa femme
 George Dandin|CLITANDRE|amoureux d’Angélique
 George Dandin|CLAUDINE|suivante d’Angélique
-George Dandin|LUBIN|paysan|servant Clitandre
+George Dandin|LUBIN|paysan, servant Clitandre
 George Dandin|COLIN|valet de George Dandin
-L’Avare|HARPAGON|père de Cléante et d’Élise|et amoureux de Mariane
-L’Avare|CLÉANTE|fils d’Harpagon|amant de Mariane
-L’Avare|ÉLISE|fille d’Harpagon|amante de Valère
-L’Avare|VALÈRE|fils d’Anselme|et amant d’Élise
-L’Avare|MARIANE|amante de Cléante|et aimée d’Harpagon
-L’Avare|ANSELME|père de Valère|et de Mariane
+L’Avare|HARPAGON|père de Cléante et d’Élise, et amoureux de Mariane
+L’Avare|CLÉANTE|fils d’Harpagon, amant de Mariane
+L’Avare|ÉLISE|fille d’Harpagon, amante de Valère
+L’Avare|VALÈRE|fils d’Anselme, et amant d’Élise
+L’Avare|MARIANE|amante de Cléante, et aimée d’Harpagon
+L’Avare|ANSELME|père de Valère, et de Mariane
 L’Avare|FROSINE|femme d’intrigue
 L’Avare|MAITRE SIMON|courtier
 L’Avare|MAITRE JACQUES|cuisinier et cocher d’Harpagon
 L’Avare|LA FLÈCHE|valet de Cléante
 L’Avare|DAME CLAUDE|servante d’Harpagon
-L’Avare|BRINDAVOINE|LA MERLUCHE|laquais d’Harpagon
+L’Avare|BRINDAVOINE|LA MERLUCHE, laquais d’Harpagon
 L’Avare|LE COMMISSAIRE|ET SON CLERC
 Monsieur de Pourceaugnac|JULIE|fille d’Oronte
 Monsieur de Pourceaugnac|NÉRINE|femme d’intrigue
 Monsieur de Pourceaugnac|LUCETTE|feinte Gasconne
 Monsieur de Pourceaugnac|ÉRASTE|amant de Julie
-Monsieur de Pourceaugnac|SBRIGANI|Napolitain|homme d’intrigue
-Monsieur de Pourceaugnac|PLUSIEURS MUSICIENS|JOUEURS D’INSTRUMENTS|ET DANSEURS
-Les Amants magnifiques|ARISTIONE|princesse|mère d’Ériphile
+Monsieur de Pourceaugnac|SBRIGANI|Napolitain, homme d’intrigue
+Monsieur de Pourceaugnac|PLUSIEURS MUSICIENS|JOUEURS D’INSTRUMENTS, ET DANSEURS
+Les Amants magnifiques|ARISTIONE|princesse, mère d’Ériphile
 Les Amants magnifiques|ÉRIPHILE|fille de la princesse
 Les Amants magnifiques|CLÉONICE|confidente d’Ériphile
 Les Amants magnifiques|CHORÈBE|de la suite de la princesse
-Les Amants magnifiques|IPHICRATE|TIMOCLÈS|amants magnifiques
-Les Amants magnifiques|SOSTRATE|général d’armée|amant d’Ériphile
-Les Amants magnifiques|CLITIDAS|plaisant de cour|de la suite d’Ériphile
+Les Amants magnifiques|IPHICRATE|TIMOCLÈS, amants magnifiques
+Les Amants magnifiques|SOSTRATE|général d’armée, amant d’Ériphile
+Les Amants magnifiques|CLITIDAS|plaisant de cour, de la suite d’Ériphile
 Les Amants magnifiques|ANAXARQUE|astrologue
 Les Amants magnifiques|CLÉON|fils d’Anaxarque
 Les Amants magnifiques|UNE FAUSSE VÉNUS|d’intelligence avec Anaxarque
@@ -174,33 +174,31 @@ Le Bourgeois gentilhomme|LUCILE|fille de M. Jourdain
 Le Bourgeois gentilhomme|NICOLE|servante
 Le Bourgeois gentilhomme|CLÉONTE|amoureux de Lucile
 Le Bourgeois gentilhomme|COVIELLE|valet de Cléonte
-Le Bourgeois gentilhomme|DORANTE|comte|amant de Dorimène
+Le Bourgeois gentilhomme|DORANTE|comte, amant de Dorimène
 Le Bourgeois gentilhomme|DORIMÈNE|marquise
-Le Bourgeois gentilhomme|PLUSIEURS MUSICIENS|MUSICIENNES|JOUEURS D’INSTRUMENTS|DANSEURS|CUISINIERS|GARÇONS TAILLEURS|ET AUTRES PERSONNAGES DES INTERMÈDES ET DU BALLET
-Psyché|composé de Flore|Nymphes|Palæmon|Vertumne
-Psyché|Sylvains|Faunes|Dryades et Naïades
+Le Bourgeois gentilhomme|PLUSIEURS MUSICIENS|MUSICIENNES, JOUEURS D’INSTRUMENTS, DANSEURS, CUISINIERS, GARÇONS TAILLEURS, ET AUTRES PERSONNAGES DES INTERMÈDES ET DU BALLET
 Les Fourberies de Scapin|ARGANTE|père d’Octave et de Zerbinette
 Les Fourberies de Scapin|GÉRONTE|père de Léandre et de Hyacinte
-Les Fourberies de Scapin|OCTAVE|fils d’Argante|et amant de Hyacinte
-Les Fourberies de Scapin|LÉANDRE|fils de Géronte|et amant de Zerbinette
-Les Fourberies de Scapin|ZERBINETTE|crue Égyptienne|et reconnue fille d’Argante|et amante de Léandre
-Les Fourberies de Scapin|HYACINTE|fille de Géronte|et amante d’Octave
-Les Fourberies de Scapin|SCAPIN|valet de Léandre|et fourbe
+Les Fourberies de Scapin|OCTAVE|fils d’Argante, et amant de Hyacinte
+Les Fourberies de Scapin|LÉANDRE|fils de Géronte, et amant de Zerbinette
+Les Fourberies de Scapin|ZERBINETTE|crue Égyptienne, et reconnue fille d’Argante, et amante de Léandre
+Les Fourberies de Scapin|HYACINTE|fille de Géronte, et amante d’Octave
+Les Fourberies de Scapin|SCAPIN|valet de Léandre, et fourbe
 Les Fourberies de Scapin|SILVESTRE|valet d’Octave
 Les Fourberies de Scapin|NÉRINE|nourrice de Hyacinte
 Les Fourberies de Scapin|CARLE|fourbe
 La Comtesse d’Escarbagnas|LE COMTE|son fils
 La Comtesse d’Escarbagnas|LE VICOMTE|amant de Julie
 La Comtesse d’Escarbagnas|JULIE|amante du Vicomte
-La Comtesse d’Escarbagnas|MONSIEUR TIBAUDIER|conseiller|amant de la Comtesse
-La Comtesse d’Escarbagnas|MONSIEUR HARPIN|receveur des tailles|autre amant de la Comtesse
+La Comtesse d’Escarbagnas|MONSIEUR TIBAUDIER|conseiller, amant de la Comtesse
+La Comtesse d’Escarbagnas|MONSIEUR HARPIN|receveur des tailles, autre amant de la Comtesse
 La Comtesse d’Escarbagnas|MONSIEUR BOBINET|précepteur de Monsieur le Comte
 La Comtesse d’Escarbagnas|ANDRÉE|suivante de la Comtesse
 La Comtesse d’Escarbagnas|JEANNOT|laquais de Monsieur Tibaudier
 La Comtesse d’Escarbagnas|CRIQUET|laquais de la Comtesse
 Les Femmes savantes|CHRYSALE|bon Bourgeois
 Les Femmes savantes|PHILAMINTE|femme de Chrysale
-Les Femmes savantes|ARMANDE|HENRIETTE|filles de Chrysale et de Philaminte
+Les Femmes savantes|ARMANDE|HENRIETTE, filles de Chrysale et de Philaminte
 Les Femmes savantes|ARISTE|frère de Chrysale
 Les Femmes savantes|BÉLISE|sœur de Chrysale
 Les Femmes savantes|CLITANDRE|amant d’Henriette
@@ -209,5 +207,3 @@ Les Femmes savantes|VADIUS|savant
 Les Femmes savantes|MARTINE|servante de cuisine
 Les Femmes savantes|L’ÉPINE|laquais de Trissotin
 Les Femmes savantes|JULIEN|valet de Vadius
-Le Malade imaginaire|Après les glorieuses fatigues|et les exploits victorieux de notre auguste monarque ; il est bien juste que tous ceux qui se mêlent d’écrire|travaillent ou à ses louanges|ou à son divertissement. C’est ce qu’ici l’on a voulu faire|et ce prologue est un essai des louanges de ce grand prince|qui donne entrée à la comédie du Malade imaginaire|dont le projet a été fait pour le délasser de ses nobles travaux
-Le Malade imaginaire|La décoration représente un lieu champêtre|et néanmoins fort agréable
