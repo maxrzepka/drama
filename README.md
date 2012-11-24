@@ -12,9 +12,9 @@ Instead of learning clojure with factorial or some 4clojure problems,
 why not just start directly to do something real.
 And on the way to give you the feel of the clojure power : be declarative , data and functions , concise and clear syntax.
 
-[cascalog]() , [enlive]() , [ring](), [moustache]() are ideal examples of this new way of programming.
+[cascalog](https://github.com/nathanmarz/cascalog) , [enlive](https://github.com/cgrand/enlive) , [ring](https://github.com/mmcgrana/ring), [moustache](https://github.com/cgrand/moustache) are ideal examples of this new way of programming.
 
-But most of new comers sees clojure as unusual and cryptic. Such expressions like
+But most of new comers see clojure as unusual and cryptic. Such expressions like
 `[:div#main :ul :li [:a (h/attr= :href "/")]]` or
 `(<- [?name ?sum] (persons ?name ?amount) (co/sum ?amount :>  ?sum))`
  are in fact a concise, elegant, powerful ways to express your logic.
@@ -25,7 +25,6 @@ and hope you will enjoy the beauty of clojure as I do.
 A html source transcript is also available http://maxrzepka.github.com/drama/doc.html
 
 You may consider my other project https://github.com/maxrzepka/clojure-by-example to play with enlive selectors on [heroku](http://cold-dusk-9608.herokuapp.com/).
-
 
 ## Act 1 : Scraping with enlive
 
