@@ -3,7 +3,7 @@
 ;; Cascalog is used to query our data. It's build on top Hadoop and cascading
 ;; but you don't need to have any knowlegde on Hadoop ecosystem or map/reduce in order to use it.
 ;;
-;; Most of the time Cascalog lets you concentrate on "what" you want
+;; Most of the time, Cascalog let's you concentrate on "what" you want
 ;; instead of "how" : it's declarative like SQL.
 ;;
 (ns drama.act2
@@ -13,28 +13,22 @@
             ))
 
 ;; ## Model
-;; A play has a title and a date  , a character has a name and a description
+;; Data in cascalog are list of tuples
 ;;
-(def plays "list of [title date]"
-  (map vec (a1/file->coll "resources/data/moliere_plays.txt" )))
+(def plays "list of [title date url]"
+  (a1/file->coll "resources/data/moliere_plays.txt" ))
 
 (def  characters
   "List all records [title of the play, character's name , characters's desc ]
-Clean up the raw file : skip empty records , merge columns if more than expected
 "
-  (keep (fn [r]
-          (let [size (count r)]
-            (cond (< 3 size) (let [[a b & c] r] [a b (clojure.string/join " " c)])
-                  (= 3 size) (vec r)
-                  :else nil)))
-        (a1/file->coll "resources/data/moliere_characters.txt")))
+  (a1/file->coll "resources/data/moliere_characters.txt"))
 
 ;; ## Some cascalog queries
 ;; Any cascalog query has always these 3 parts :
 ;;
-;; 1. how to define and execute queries `<-` `?<-` `??<-`. [Here details](https://github.com/nathanmarz/cascalog/wiki/Defining-and-executing-queries)
-;; 2. columns of the query
-;; 3. predicates : generator , operation , aggregator . [Here details](https://github.com/nathanmarz/cascalog/wiki/Guide-to-custom-operations)
+;; 1. How to define and execute queries `<-` `?<-` `??<-`. [Here details](https://github.com/nathanmarz/cascalog/wiki/Defining-and-executing-queries)
+;; 2. Columns of the query
+;; 3. Predicates : generator , operation , aggregator . [Here details](https://github.com/nathanmarz/cascalog/wiki/Guide-to-custom-operations)
 ;;
 (defn find-characters
   "Get All characters of a play"
@@ -46,15 +40,23 @@ Clean up the raw file : skip empty records , merge columns if more than expected
   "Get all the plays where a character is present : query using an implicit join"
   [name]
   (ca/??<- [?title ?date]
-           (plays ?title ?date)
+           (plays ?title ?date ?url)
            (characters ?title name ?desc)))
 
-(defn distinct-characters
-  "List all character with their number of occurences in plays"
+(defn list-characters
+  "List all characters with their number of occurences in plays"
   []
   (ca/??<- [?name ?ct]
-                  (characters ?title ?name ?desc)
-                  (co/count ?ct)))
+           (characters ?title ?name ?desc)
+           (co/count ?ct)))
+
+(defn list-plays
+  "List all plays and counting their characters"
+  []
+  (ca/??<- [?title ?date ?url ?ct]
+           (plays ?title ?date ?url)
+           (characters ?title ?name ?desc)
+           (co/count ?ct)))
 
 (defn top-n-characters
   "Get the n most used characters"

@@ -12,13 +12,13 @@
 ;; Enlive is a templating system working as in the following lines :
 ;;
 ;; 1. plain HTML without any special tags
-;; 2. HTML pages are converted to a tree of nodes, like `{:tag :a :attrs {:href "/"} :content () }`
+;; 2. HTML page is converted into a tree of nodes, like `{:tag :a :attrs {:href "/"} :content () }`
 ;; 3. Enlive provides functions to select and transform the above mentioned tree structure.
 ;;
 ;; Web scraping with enlive are done in 2 steps :
 ;;
 ;; 1. Use enlive selectors to find the part of HTML page containing the requested information
-;; 2. Common function extract the infos from the nodes
+;; 2. Plain functions extract the infos from the nodes
 
 (defn resource
   "Converts a source (url , file or string) into nodes"
@@ -141,7 +141,7 @@ Please use it with caution as it scrapes more than 60 web pages.
   "Loads into resources/data/moliere_plays.txt all plays."
   [plays]
   (coll->file "resources/data/moliere_plays.txt"
-             (map (juxt :title :date) plays)))
+             (map (juxt :title :date :url) plays)))
 
 (defn characters->file
   "Loads into resources/data/moliere_characters.txt all characters.
