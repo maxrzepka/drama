@@ -1,16 +1,15 @@
 ;; # Act 2 : Let's play with data
 ;;
 ;; Cascalog is used to query our data. It's build on top Hadoop and cascading
-;; but you don't need to have any knowlegde on Hadoop ecosystem or map/reduce in order to use it.
+;; but you don't need to have any knowlegde of Hadoop ecosystem or map/reduce in order to use it.
 ;;
 ;; Most of the time, Cascalog let's you concentrate on "what" you want
-;; instead of "how" : it's declarative like SQL.
+;; not on "how" : it's declarative like SQL.
 ;;
 (ns drama.act2
   (:require [drama.act1 :as a1]
             [cascalog.api :as ca]
-            [cascalog.ops :as co]
-            ))
+            [cascalog.ops :as co]))
 
 ;; ## Model
 ;; Data in cascalog are list of tuples
@@ -21,7 +20,7 @@
 (def  characters
   "List all records [title of the play, character's name , characters's desc ]
 "
-  (a1/file->coll "resources/data/moliere_characters.txt"))
+  (a1/file->coll "resources/data/moliere_characters.txt" :size 3))
 
 ;; ## Some cascalog queries
 ;; Any cascalog query has always these 3 parts :
@@ -66,9 +65,3 @@
                        (co/count ?ct))
         q (co/first-n count-q n :sort ["?ct"] :reverse true)]
     (ca/??- q)))
-
-;; ## Further topics
-;;
-;; 1. Files as Input / Output of queries
-;; 2. More about joins
-;; 3. Create your own aggregate function

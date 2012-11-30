@@ -128,13 +128,15 @@ Please use it with caution as it scrapes more than 60 web pages.
 
 (defn file->coll
   "Returns a list of vectors. If the header is supplied, it returns a list of maps"
-  [f & {:keys [separator header] :or {separator "|"}}]
+  [f & {:keys [separator header size] :or {separator "|"}}]
   (let [lines (.split (slurp f) "\n")
         separator ({"|" "\\|"} separator separator)
         cut (fn [l] ((if (sequential? header)
                        (partial zipmap header)
                        identity)
-                     (map #(.trim %) (.split l separator))))]
+                     (map #(.trim %)
+                          (if size (.split l separator size)
+                              (.split l separator)))))]
     (map cut lines)))
 
 (defn plays->file
