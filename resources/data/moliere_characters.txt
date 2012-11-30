@@ -176,30 +176,6 @@ Pastorale comique|FILÈNE|riche pasteur
 Pastorale comique|CORIDON|jeune berger
 Pastorale comique|BERGER ENJOUÉ|
 Pastorale comique|UN PÂTRE|
-Pastorale comique|Ô|toi ! qui peux rendre agréables
-Pastorale comique|PREMIER AIR|
-Pastorale comique|SECOND AIR|
-Pastorale comique|LE BERGER|continue :
-Pastorale comique|UN AUTRE BERGER|chante M  Le Gros
-Pastorale comique|LE BERGER|continue :
-Pastorale comique|II CHANSON SUR UN AIR DE MENUET|
-Pastorale comique|UN BERGER|chante les deux premiers vers
-Pastorale comique|LE BERGER|continue :
-Pastorale comique|LE CHŒUR|
-Pastorale comique|LE BERGER|
-Pastorale comique|LE CHŒUR|
-Pastorale comique|UN AUTRE BERGER|chante les deux premiers vers
-Pastorale comique|LE BERGER|continue :
-Pastorale comique|À|quoi passer nos beaux jours ?
-Pastorale comique|LE CHŒUR|
-Pastorale comique|LE BERGER|
-Pastorale comique|LE CHŒUR|
-Pastorale comique|QUATRE BERGERS ET QUATRE BERGÈRES|
-Pastorale comique|BERGERS : LE ROI|
-Pastorale comique|BERGÈRES : MADAME|
-Pastorale comique|CINQUIÈME ENTRÉEALEXANDRE ET PORUS CINQ GRECS|
-Pastorale comique|ET CINQ INDIENSSIXIÈME ENTRÉECINQ POÈTESSEPTIÈME ENTRÉE ET|RÉCITAmour trop indiscret devoir trop rigoureux
-Pastorale comique|ONZIÈME ENTRÉEDOUZIÈME ENTRÉETREIZIÈME ET DERNIÈRE ENTRÉE|
 Le Sicilien ou l’Amour peintre|ADRASTE|gentilhomme français amant d’Isidore
 Le Sicilien ou l’Amour peintre|DOM PÈDRE|Sicilien amant d’Isidore
 Le Sicilien ou l’Amour peintre|ISIDORE|Grecque esclave de Dom Pèdre
@@ -289,26 +265,6 @@ Le Bourgeois gentilhomme|MAÎTRE DE PHILOSOPHIE|
 Le Bourgeois gentilhomme|MAÎTRE TAILLEUR|
 Le Bourgeois gentilhomme|GARÇON TAILLEUR|
 Le Bourgeois gentilhomme|DEUX LAQUAIS|
-Le Bourgeois gentilhomme|PLUSIEURS MUSICIENS MUSICIENNES JOUEURS D’INSTRUMENTS DANSEURS CUISINIERS GARÇONS TAILLEURS ET AUTRES PERSONNAGES DES INTERMÈDES ET DU BALLET|
-Le Bourgeois gentilhomme|DIALOGUE EN MUSIQUE|
-Le Bourgeois gentilhomme|UNE MUSICIENNE ET DEUX MUSICIENS [10]|C’est la musicienne qui chante le premier couplet d’après la partition
-Le Bourgeois gentilhomme|PREMIER MUSICIEN|
-Le Bourgeois gentilhomme|SECOND MUSICIEN|
-Le Bourgeois gentilhomme|PREMIER MUSICIEN|
-Le Bourgeois gentilhomme|MUSICIENNE|
-Le Bourgeois gentilhomme|SECOND MUSICIEN|
-Le Bourgeois gentilhomme|PREMIER MUSICIEN|
-Le Bourgeois gentilhomme|MUSICIENNE|
-Le Bourgeois gentilhomme|SECOND MUSICIEN|
-Le Bourgeois gentilhomme|PREMIER MUSICIEN|
-Le Bourgeois gentilhomme|MUSICIENNE|
-Le Bourgeois gentilhomme|SECOND MUSICIEN|
-Le Bourgeois gentilhomme|MUSICIENNE|
-Le Bourgeois gentilhomme|SECOND MUSICIEN|
-Le Bourgeois gentilhomme|MUSICIENNE|
-Le Bourgeois gentilhomme|SECOND MUSICIEN|
-Le Bourgeois gentilhomme|TOUS TROIS|
-Le Bourgeois gentilhomme|À|des ardeurs si belles
 Psyché|CHŒUR|des divinités de la terre et des eaux
 Les Fourberies de Scapin|ARGANTE|père d’Octave et de Zerbinette
 Les Fourberies de Scapin|GÉRONTE|père de Léandre et de Hyacinte
