@@ -13,7 +13,7 @@
         [ring.util.response :only [response content-type file-response]]
         [ring.adapter.jetty :only [run-jetty]])
   (:require [net.cgrand.enlive-html :as h]
-            [drama.act2 :as a2]))
+            ))
 
 
 ;; ## Enlive templating System
@@ -71,25 +71,8 @@
 ;;
 ;; [More details](https://github.com/cgrand/moustache)
 ;;
-(def routes
-  (app
-   (wrap-file "resources") ;; to get CSS files
-   [""] (fn [req] (render (main "Molière Works" (map vec->item a2/plays))))
-   [play &] (fn [req] (render (main play (map vec->item (a2/find-characters play)))))))
 
-(defn generate-pages
-  "Generates HTML pages for each play"
-  []
-  (doseq [[title _] a2/plays]
-    (spit (str "resources/generated/" title ".html")
-          (apply str (main title
-                           (map #(assoc (vec->item %) :nolink 1)
-                                (a2/find-characters title)))))))
 
-(defn generate-summary
-  []
-  (spit (str "resources/generated/plays.html")
-        (apply str (main "Molière Works" (map vec->item (a2/list-plays))))))
 
 (defn baked-handler [name]
   (fn [req]
