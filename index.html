@@ -3029,7 +3029,7 @@ net.brehaut.ClojureTools = (function (SH) {
   };
 })(SyntaxHighlighter);
 </script><title>drama -- Marginalia</title></head><body><table><tr><td class="docs"><div class="header"><h1 class="project-name">drama</h1><h2 class="project-version">0.1.0-SNAPSHOT</h2><br /><p>A clojure drama in 3 acts and a prologue</p>
-</div><div class="dependencies"><h3>dependencies</h3><table><tr><td class="dep-name">org.clojure/clojure</td><td class="dotted"><hr /></td><td class="dep-version">1.4.0</td></tr><tr><td class="dep-name">ring</td><td class="dotted"><hr /></td><td class="dep-version">1.1.6</td></tr><tr><td class="dep-name">org.slf4j/slf4j-log4j12</td><td class="dotted"><hr /></td><td class="dep-version">1.6.1</td></tr><tr><td class="dep-name">org.slf4j/slf4j-api</td><td class="dotted"><hr /></td><td class="dep-version">1.6.1</td></tr><tr><td class="dep-name">enlive</td><td class="dotted"><hr /></td><td class="dep-version">1.0.1</td></tr><tr><td class="dep-name">net.cgrand/moustache</td><td class="dotted"><hr /></td><td class="dep-version">1.1.0</td></tr><tr><td class="dep-name">cascalog</td><td class="dotted"><hr /></td><td class="dep-version">1.10.0</td></tr></table></div></td><td class="codes" style="text-align: center; vertical-align: middle;color: #666;padding-right:20px"><br /><br /><br />(this space intentionally left almost blank)</td></tr><tr><td class="docs"><div class="toc"><a name="toc"><h3>namespaces</h3></a><ul><li><a href="#drama.act1">drama.act1</a></li><li><a href="#drama.act2">drama.act2</a></li><li><a href="#drama.act3">drama.act3</a></li><li><a href="#drama.epilogue">drama.epilogue</a></li></ul></div></td><td class="codes">&nbsp;</td></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#drama.act1" name="drama.act1"><h1 class="project-name">drama.act1</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h1>Act I : Scraping web pages with enlive</h1>
+</div><div class="dependencies"><h3>dependencies</h3><table><tr><td class="dep-name">org.clojure/clojure</td><td class="dotted"><hr /></td><td class="dep-version">1.5.0-alpha2</td></tr><tr><td class="dep-name">ring</td><td class="dotted"><hr /></td><td class="dep-version">1.1.6</td></tr><tr><td class="dep-name">org.slf4j/slf4j-log4j12</td><td class="dotted"><hr /></td><td class="dep-version">1.6.1</td></tr><tr><td class="dep-name">org.slf4j/slf4j-api</td><td class="dotted"><hr /></td><td class="dep-version">1.6.1</td></tr><tr><td class="dep-name">enlive</td><td class="dotted"><hr /></td><td class="dep-version">1.0.1</td></tr><tr><td class="dep-name">net.cgrand/moustache</td><td class="dotted"><hr /></td><td class="dep-version">1.1.0</td></tr><tr><td class="dep-name">cascalog</td><td class="dotted"><hr /></td><td class="dep-version">1.10.0</td></tr></table></div></td><td class="codes" style="text-align: center; vertical-align: middle;color: #666;padding-right:20px"><br /><br /><br />(this space intentionally left almost blank)</td></tr><tr><td class="docs"><div class="toc"><a name="toc"><h3>namespaces</h3></a><ul><li><a href="#drama.act1">drama.act1</a></li><li><a href="#drama.act2">drama.act2</a></li><li><a href="#drama.act3">drama.act3</a></li><li><a href="#drama.epilogue">drama.epilogue</a></li></ul></div></td><td class="codes">&nbsp;</td></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#drama.act1" name="drama.act1"><h1 class="project-name">drama.act1</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h1>Act I : Scraping web pages with enlive</h1>
 
 <p>The goal is to retrieve all theater plays by a famous author (Here the french Molière from the 17th century)
 and the characters from those plays.
@@ -3042,7 +3042,7 @@ and the characters from those plays.
 
 <ol>
 <li>plain HTML without any special tags</li>
-<li>HTML pages are converted to a tree of nodes, like <code>{:tag :a :attrs {:href "/"} :content () }</code></li>
+<li>HTML page is converted into a tree of nodes, like <code>{:tag :a :attrs {:href "/"} :content () }</code></li>
 <li>Enlive provides functions to select and transform the above mentioned tree structure.</li>
 </ol>
 
@@ -3050,7 +3050,7 @@ and the characters from those plays.
 
 <ol>
 <li>Use enlive selectors to find the part of HTML page containing the requested information</li>
-<li>Common function extract the infos from the nodes</li>
+<li>Plain functions extract the infos from the nodes</li>
 </ol>
 </td><td class="codes"></td></tr><tr><td class="docs"><p>Converts a source (url , file or string) into nodes</p>
 </td><td class="codes"><pre class="brush: clojure">(defn resource
@@ -3098,26 +3098,41 @@ resources/data/{ecoledesfemmes.html,ecoledesfemmes_acte1.html}</p>
        first
        :attrs
        :href
-       (str moliere)))</pre></td></tr><tr><td class="docs"><p>A bit more tricky here, HTML pages are not always well structured</p>
-
-<p>TODO : can be improved</p>
+       (str moliere)))</pre></td></tr><tr><td class="docs"><p>Returns a list of characters [name , description].
+Here it's bit more trickier : various cases to handle</p>
 </td><td class="codes"><pre class="brush: clojure">(defn extract-characters
   [nodes]
-  (let [items (keep #(when-not (= :br (:tag %)) (h/text %))
-                    (:content (first (h/select nodes [:div#centre_texte :div :div]))))
+  (let [selector1 [:div#centre_texte :div :div h/text-node]
+        selector2 [:div#centre_texte
+                   [:div h/first-of-type]
+                   [:table h/first-of-type] :tr]
+        items (h/select
+               nodes
+               selector1)
+        items (if (&lt; 1 (count items))
+                (s/split-lines (apply str items));;one line = one character
+                (map h/text (h/select nodes selector2)))
         trim (fn [s] (-&gt; s
-                         (s/replace-first #&quot;^[,. ]+&quot; ) ;trim left
-                         (s/replace-first #&quot;[,. ]+$&quot; ) ;trim right))]
-    (map (fn [l] (mapv trim (s/split l #&quot;,&quot;)))
-         (s/split-lines (apply str items)))))</pre></td></tr><tr><td class="docs"><h2>Put it all together</h2>
-</td><td class="codes"></td></tr><tr><td class="docs"><p>Associate the characters to a play</p>
+                         (s/replace-first #&quot;^[,. ]+&quot; &quot;&quot;) ;trim left
+                         (s/replace-first #&quot;[,. ]+$&quot; &quot;&quot;) ;trim right))
+        extractor (fn [s]
+                    (map (partial s/join &quot; &quot;)
+                         (split-with #(= (.toUpperCase %) %)
+                                     (s/split (trim s) #&quot;[,. ]+&quot;))))
+        validate (fn [c] (when (not (empty? (first c))) c))]
+    (keep (comp validate extractor) items)))</pre></td></tr><tr><td class="docs"><p>Associate the characters to a play</p>
+
+<h2>Put it all together</h2>
 </td><td class="codes"><pre class="brush: clojure">(defn append-characters
   [{u :url :as play}]
   (let [curl (characters-url (resource u))
         chars (extract-characters (resource curl))]
     (assoc play
       :characters-url curl
-      :characters chars)))</pre></td></tr><tr><td class="docs"><p>Returns a lazy-sequence ie only fetch the data when requested</p>
+      :characters chars)))</pre></td></tr><tr><td class="docs"><p>Returns all informations wanted as a lazy-sequence
+ie only fetch the data when requested.</p>
+
+<p>Please use it with caution as it scrapes more than 60 web pages.</p>
 </td><td class="codes"><pre class="brush: clojure">(defn all-in-one
   []
   (map append-characters
@@ -3127,22 +3142,30 @@ resources/data/{ecoledesfemmes.html,ecoledesfemmes_acte1.html}</p>
   [f coll &amp; {:keys [separator] :or {separator &quot;|&quot;}}]
   (spit f (apply str (map #(str (s/join separator %) &quot;\n&quot;) coll))))</pre></td></tr><tr><td class="docs"><p>Returns a list of vectors. If the header is supplied, it returns a list of maps</p>
 </td><td class="codes"><pre class="brush: clojure">(defn file-&gt;coll
-  [f &amp; {:keys [separator header] :or {separator &quot;|&quot;}}]
+  [f &amp; {:keys [separator header size] :or {separator &quot;|&quot;}}]
   (let [lines (.split (slurp f) &quot;\n&quot;)
         separator ({&quot;|&quot; &quot;\\|&quot;} separator separator)
         cut (fn [l] ((if (sequential? header)
                        (partial zipmap header)
                        identity)
-                     (map #(.trim %) (.split l separator))))]
-    (map cut lines)))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(defn plays-&gt;file [plays]
+                     (map #(.trim %)
+                          (if size (.split l separator size)
+                              (.split l separator)))))]
+    (map cut lines)))</pre></td></tr><tr><td class="docs"><p>Loads into resources/data/moliere_plays.txt all plays.</p>
+</td><td class="codes"><pre class="brush: clojure">(defn plays-&gt;file
+  [plays]
   (coll-&gt;file &quot;resources/data/moliere_plays.txt&quot;
-             (map (juxt :title :date) plays)))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(defn characters-&gt;file [plays]
-  (coll-&gt;file &quot;resources/data/moliere_characters.txt&quot;
-             (mapcat (fn [{cs :characters t :title :as p}]
-                     (keep (fn [c] (when (&lt; 1 (count c)) (cons t c))) cs))
-                     plays)))</pre></td></tr><tr><td class="docs"><h2>Further information on enlive</h2>
+             (map (juxt :title :date :url) plays)))</pre></td></tr><tr><td class="docs"><p>Loads into resources/data/moliere_characters.txt all characters.
+Skip invalid characters</p>
+</td><td class="codes"><pre class="brush: clojure">(defn characters-&gt;file
+  [plays]
+  (let [valid? (fn [c] (and (&lt; 1 (count c))
+                            (= (first c) (.toUpperCase (first c)))))]
+    (coll-&gt;file &quot;resources/data/moliere_characters.txt&quot;
+                      (mapcat (fn [{cs :characters t :title}]
+                                (keep (fn [c] (when (valid? c) (cons t c)))
+                                      cs))
+                              plays))))</pre></td></tr><tr><td class="docs"><h2>Further information on enlive</h2>
 
 <ul>
 <li>Enlive on <a href="https://github.com/cgrand/enlive">github</a></li>
@@ -3155,37 +3178,31 @@ source on <a href="https://github.com/maxrzepka/clojure-by-example">github</a></
 </td><td class="codes"></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#drama.act2" name="drama.act2"><h1 class="project-name">drama.act2</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h1>Act 2 : Let's play with data</h1>
 
 <p>Cascalog is used to query our data. It's build on top Hadoop and cascading
-but you don't need to have any knowlegde on Hadoop ecosystem or map/reduce in order to use it.</p>
+but you don't need to have any knowlegde of Hadoop ecosystem or map/reduce in order to use it.</p>
 
-<p>Most of the time Cascalog lets you concentrate on "what" you want
-instead of "how" : it's declarative like SQL.</p>
+<p>Most of the time, Cascalog let's you concentrate on "what" you want
+not on "how" : it's declarative like SQL.</p>
 </td><td class="codes"><pre class="brush: clojure">(ns drama.act2
   (:require [drama.act1 :as a1]
             [cascalog.api :as ca]
-            [cascalog.ops :as co]))</pre></td></tr><tr><td class="docs"><p>list of [title date]</p>
+            [cascalog.ops :as co]))</pre></td></tr><tr><td class="docs"><p>list of [title date url]</p>
 
 <h2>Model</h2>
 
-<p>A play has a title and a date  , a character has a name and a description</p>
+<p>Data in cascalog are list of tuples</p>
 </td><td class="codes"><pre class="brush: clojure">(def plays 
-  (map vec (a1/file-&gt;coll &quot;resources/data/moliere_plays.txt&quot; )))</pre></td></tr><tr><td class="docs"><p>List all records [title of the play, character's name , characters's desc ]
-Clean up the raw file : skip empty records , merge columns if more than expected</p>
+  (a1/file-&gt;coll &quot;resources/data/moliere_plays.txt&quot; ))</pre></td></tr><tr><td class="docs"><p>List all records [title of the play, character's name , characters's desc ]</p>
 </td><td class="codes"><pre class="brush: clojure">(def  characters
-  (keep (fn [r]
-          (let [size (count r)]
-            (cond (&lt; 3 size) (let [[a b &amp; c] r] [a b (clojure.string/join &quot; &quot; c)])
-                  (= 3 size) (vec r)
-                  :else nil)))
-        (a1/file-&gt;coll &quot;resources/data/moliere_characters.txt&quot;)))</pre></td></tr><tr><td class="docs"><p>Get All characters of a play</p>
+  (a1/file-&gt;coll &quot;resources/data/moliere_characters.txt&quot; :size 3))</pre></td></tr><tr><td class="docs"><p>Get All characters of a play</p>
 
 <h2>Some cascalog queries</h2>
 
 <p>Any cascalog query has always these 3 parts :</p>
 
 <ol>
-<li>how to define and execute queries <code>&lt;-</code> <code>?&lt;-</code> <code>??&lt;-</code>. <a href="https://github.com/nathanmarz/cascalog/wiki/Defining-and-executing-queries">Here details</a></li>
-<li>columns of the query</li>
-<li>predicates : generator , operation , aggregator . <a href="https://github.com/nathanmarz/cascalog/wiki/Guide-to-custom-operations">Here details</a></li>
+<li>How to define and execute queries <code>&lt;-</code> <code>?&lt;-</code> <code>??&lt;-</code>. <a href="https://github.com/nathanmarz/cascalog/wiki/Defining-and-executing-queries">Here details</a></li>
+<li>Columns of the query</li>
+<li>Predicates : generator , operation , aggregator . <a href="https://github.com/nathanmarz/cascalog/wiki/Guide-to-custom-operations">Here details</a></li>
 </ol>
 </td><td class="codes"><pre class="brush: clojure">(defn find-characters
   [title]
@@ -3194,33 +3211,33 @@ Clean up the raw file : skip empty records , merge columns if more than expected
 </td><td class="codes"><pre class="brush: clojure">(defn find-plays
   [name]
   (ca/??&lt;- [?title ?date]
-           (plays ?title ?date)
-           (characters ?title name ?desc)))</pre></td></tr><tr><td class="docs"><p>List all character with their number of occurences in plays</p>
-</td><td class="codes"><pre class="brush: clojure">(defn distinct-characters
+           (plays ?title ?date ?url)
+           (characters ?title name ?desc)))</pre></td></tr><tr><td class="docs"><p>List all characters with their number of occurences in plays</p>
+</td><td class="codes"><pre class="brush: clojure">(defn list-characters
   []
   (ca/??&lt;- [?name ?ct]
-                  (characters ?title ?name ?desc)
-                  (co/count ?ct)))</pre></td></tr><tr><td class="docs"><p>Get the n most used characters</p>
+           (characters ?title ?name ?desc)
+           (co/count ?ct)))</pre></td></tr><tr><td class="docs"><p>List all plays and counting their characters</p>
+</td><td class="codes"><pre class="brush: clojure">(defn list-plays
+  []
+  (ca/??&lt;- [?title ?date ?url ?ct]
+           (plays ?title ?date ?url)
+           (characters ?title ?name ?desc)
+           (co/count ?ct)))</pre></td></tr><tr><td class="docs"><p>Get the n most used characters</p>
 </td><td class="codes"><pre class="brush: clojure">(defn top-n-characters
   [n]
   (let [count-q (ca/&lt;- [?name ?ct]
                        (characters ?title ?name ?desc)
                        (co/count ?ct))
         q (co/first-n count-q n :sort [&quot;?ct&quot;] :reverse true)]
-    (ca/??- q)))</pre></td></tr><tr><td class="docs"><h2>Further topics</h2>
-
-<ol>
-<li>Files as Input / Output of queries</li>
-<li>More about joins</li>
-<li>Create your own aggregate function</li>
-</ol>
-</td><td class="codes"></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#drama.act3" name="drama.act3"><h1 class="project-name">drama.act3</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h1>Act 3 Back to the web</h1>
+    (ca/??- q)))</pre></td></tr><tr><td class="spacer docs">&nbsp;</td><td class="codes" /></tr><tr><td class="docs"><div class="docs-header"><a class="anchor" href="#drama.act3" name="drama.act3"><h1 class="project-name">drama.act3</h1><a class="toc-link" href="#toc">toc</a></a></div></td><td class="codes" /></tr><tr><td class="docs"><h1>Act 3 Back to the web</h1>
 
 <p>Architecture in place :</p>
 
 <ol>
+<li>Ring interface : 2 maps Request/Response and 2 functions handler/middleware</li>
+<li>Routing with moustache  <a href="http://brehaut.net/blog/2011/ring_introduction">in-depth intro</a></li>
 <li>HTML templating with enlive</li>
-<li>Routing with moustache : <a href="http://brehaut.net/blog/2011/ring_introduction">in-depth intro</a></li>
 </ol>
 </td><td class="codes"><pre class="brush: clojure">(ns drama.act3
   (:use [net.cgrand.moustache :only [app]]
@@ -3231,12 +3248,16 @@ Clean up the raw file : skip empty records , merge columns if more than expected
   (:require [net.cgrand.enlive-html :as h]
             [drama.act2 :as a2]))</pre></td></tr><tr><td class="docs"><h2>Enlive templating System</h2>
 
-<p>It's based on 2 macros <code>defsnippet</code> and <code>deftemplate</code> both are defining a fct returning a sequence of strings</p>
+<p>It's based on 2 macros <code>defsnippet</code> and <code>deftemplate</code> both define a fct returning a sequence of strings</p>
 </td><td class="codes"></td></tr><tr><td class="docs"><p>list.html</p>
 </td><td class="codes"><pre class="brush: clojure">(h/defsnippet list-item  [:div#main :ul :li]
-  [{:keys [title text nolink]} ]
-  [:a] (h/do-&gt; (if nolink identity (h/set-attr :href (str &quot;/&quot; title) )) (h/content title))
-  [:span] (h/content text))</pre></td></tr><tr><td class="docs">
+  [{:keys [title text url nolink total]} ]
+  [[:a h/first-of-type]]
+  (h/do-&gt; (if nolink identity (h/set-attr :href (str &quot;/&quot; title) ))
+          (h/content title))
+  [[:a (h/nth-of-type 2)]] (when url (h/set-attr :href  url))
+  [[:span h/first-of-type]] (h/content text)
+  [[:span (h/nth-of-type 2)]]  (h/content (str total)))</pre></td></tr><tr><td class="docs">
 </td><td class="codes"><pre class="brush: clojure">(defn prepend-attrs [att prefix]
   (fn[node] (update-in node [:attrs att] (fn[v] (str prefix v)))))</pre></td></tr><tr><td class="docs"><p>list.html</p>
 </td><td class="codes"><pre class="brush: clojure">(h/deftemplate main  [title items]
@@ -3244,9 +3265,9 @@ Clean up the raw file : skip empty records , merge columns if more than expected
   [:div#main :h3] (h/content title)
   [:div#main :ul] (if (and (sequential? items) (seq items))
                     (h/content (map list-item items))
-                     (h/substitute &quot;&quot;)))</pre></td></tr><tr><td class="docs">
-</td><td class="codes"><pre class="brush: clojure">(defn vec-&gt;item [[t d]]
-  {:title t :text d})</pre></td></tr><tr><td class="docs"><p>render view in utf-8</p>
+                    (h/substitute &quot;&quot;)))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn vec-&gt;item [[t d u c]]
+  {:title t :text d :url u :total c})</pre></td></tr><tr><td class="docs"><p>render view in utf-8</p>
 </td><td class="codes"><pre class="brush: clojure">(defn render
   [body]
   (content-type
@@ -3256,9 +3277,9 @@ Clean up the raw file : skip empty records , merge columns if more than expected
 <p>Ring is a perfect example of the motto "data and functions", it consists of</p>
 
 <ol>
-<li>the request and response are the data</li>
-<li>handler returns a response given a request</li>
-<li>middleware is High-Order function : it takes a handler as first parameter
+<li>The request and response are the data</li>
+<li>Handler returns a response given a request</li>
+<li>Middleware is High-Order function : it takes a handler as first parameter
 and returns a new handler function</li>
 </ol>
 
@@ -3286,15 +3307,22 @@ and returns a new handler function</li>
     (spit (str &quot;resources/generated/&quot; title &quot;.html&quot;)
           (apply str (main title
                            (map #(assoc (vec-&gt;item %) :nolink 1)
-                                (a2/find-characters title)))))))</pre></td></tr><tr><td class="docs"><p>Here instead of running a cascalog query to get the list of characters, it gets the generated page</p>
+                                (a2/find-characters title)))))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn generate-summary
+  []
+  (spit (str &quot;resources/generated/plays.html&quot;)
+        (apply str (main &quot;Molière Works&quot; (map vec-&gt;item (a2/list-plays))))))</pre></td></tr><tr><td class="docs">
+</td><td class="codes"><pre class="brush: clojure">(defn baked-handler [name]
+  (fn [req]
+    (file-response
+     (str name &quot;.html&quot;)
+     {:root &quot;resources/generated&quot; :index-files? true
+      :allow-symlinks? false})))</pre></td></tr><tr><td class="docs"><p>Here instead of running a cascalog query to get the list of characters, it gets the generated page</p>
 </td><td class="codes"><pre class="brush: clojure">(def baked-routes
   (app
    (wrap-file &quot;resources&quot;)
-   [&quot;&quot;] (fn [req] (render (main &quot;Molière Works&quot; (map vec-&gt;item a2/plays))))
-   [play &amp;] (fn [req]
-              (let [name (.substring ^String (url-decode (:uri req)) 1)]
-                (file-response (str &quot;/generated/&quot; play &quot;.html&quot;)
-                               {:root &quot;resources&quot; :index-files? true :allow-symlinks? false})))))</pre></td></tr><tr><td class="docs"><p>Starts Jetty server with your routes.
+   [&quot;&quot;] (baked-handler &quot;plays&quot;)
+   [play &amp;] (baked-handler play)))</pre></td></tr><tr><td class="docs"><p>Starts Jetty server with your routes.
 Note <code>(var routes)</code> allows to do interactive web development</p>
 </td><td class="codes"><pre class="brush: clojure">(defn start
   [ &amp; [port &amp; options]]
