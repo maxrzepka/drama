@@ -9,7 +9,7 @@ The plot is in 3 acts :
 
 This project intends to be a gentle way to dive into clojure ecosystem.
 
-After trained your clojure skills on some 4clojure problems, why not just start directly to do something real.
+You maybe trained your clojure skills on some 4clojure problems but why not just start directly to do something real.
 
 And on the way it will give you the feel of the clojure power : be declarative and concise, stay focused on data and functions.
 
@@ -24,20 +24,23 @@ This drama is an attempt to lower the entrance barrier of clojure
 and hope you will enjoy the simplicity of clojure as I do.
 
 A html source transcript is also available http://maxrzepka.github.com/drama/doc.html
+and also screencasts [act 1](https://vimeo.com/54718414) [act 2](https://vimeo.com/54718413) [act 3](https://vimeo.com/54591160)
 
-You may consider my other project https://github.com/maxrzepka/clojure-by-example to play with enlive selectors available on [heroku](http://cold-dusk-9608.herokuapp.com/).
+
 
 ## Act 1 : Scraping with enlive
 
 Fetch all plays of a famous writer along with their characters.
 Data coming from [this web site](toutmoliere.net) .
 
+You may consider my other project https://github.com/maxrzepka/clojure-by-example to play with enlive selectors available on [heroku](http://cold-dusk-9608.herokuapp.com/).
+
 ## Act 2 : Querying with cascalog
 
-No need to know Hadoop or map/reduce paradigms to make cascalog queries.
+No need to know Hadoop or map/reduce paradigms to play with cascalog.
 Just try it on the repl.
 
-## Act 3 : Back to the Web with ring , enlive and moustache
+## Act 3 : Back to the Web with ring, enlive and moustache
 
 Building web app shoud be simple and with clojure it is.
 
