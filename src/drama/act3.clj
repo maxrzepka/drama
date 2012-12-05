@@ -12,8 +12,8 @@
         [ring.util.codec :only [url-decode]]
         [ring.util.response :only [response content-type file-response]]
         [ring.adapter.jetty :only [run-jetty]])
-  (:require [net.cgrand.enlive-html :as h]
-            ))
+  (:require [net.cgrand.enlive-html :as h])
+  (:gen-class))
 
 
 ;; ## Enlive templating System
@@ -96,6 +96,6 @@ Note `(var routes)` allows to do interactive web development
   (run-jetty (var baked-routes) {:port (or port 8080) :join? false}))
 
 (defn -main []
-  (let [port (try (Integer/parseInt (System/getenv "PORT"))
+  (let [port (try (Integer/parseInt (System/getenv "VMC_APP_PORT"))
                   (catch  Throwable t 8080))]
     (start port)))

@@ -42,7 +42,9 @@ Just try it on the repl.
 
 ## Act 3 : Back to the Web with ring, enlive and moustache
 
-Building web app shoud be simple and with clojure it is.
+Building web app shoud be simple and with clojure it is. 
+
+Web app deployed on [cloudfoundry](http://clj-drama.cloudfoundry.com/)
 
 ## Usage
 
